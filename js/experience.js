@@ -10,7 +10,7 @@ const exp = [
     cardImage: "images/mi.jpeg",
     place: "MICROSOFT TECHNICAL CLUB VIT-BHOPAL",
     time: "(Jan - Feb, 2024)",
-    desp: "<ul><li>Organized two remarkable events, Vainateya1.0 and Code Garuda 2.0</li><li>Assigning specific roles to team members based on their expertise.</li><li>Organizing regular team meetings to discuss progress, challenges, and updates for the events.</li><li>Maintaining proper code of conduct among the volunteers and the participants.</li></ul>" 
+    desp: "<ul><li>Organized two remarkable events, Vainateya 1.0 and Code Garuda 2.0</li><li>Assigning specific roles to team members based on their expertise.</li><li>Organizing regular team meetings to discuss progress, challenges, and updates for the events.</li><li>Maintaining proper code of conduct among the volunteers and the participants.</li></ul>" 
   },
 ];
 
