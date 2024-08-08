@@ -16,7 +16,7 @@ const projects = [
     title: "Profile",
     cardImage: "images/portfolio.jpg",
     description: "Responsive Portfolio Website built in JavaScript, HTML and CSS",
-    Previewlink: "",
+    Previewlink: "https://portfolio-phi-nine-70.vercel.app/",
     Githublink: "https://github.com/Passionatelytoooadorable/Portfolio",
   },
   {
