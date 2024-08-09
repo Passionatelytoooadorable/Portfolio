@@ -147,34 +147,6 @@ html[data-theme="light"] {
     background-color: #141516;
   }
   
-  .kaggle i {
-    margin: auto;
-    font-size: 24px;
-    z-index: 1;
-    transition: var(--trans-props);
-  }
-  
-  .socialicon.kaggle{
-    color:var(--col-icon-kaggle);
-  }
-  
-  .socialicon:after {
-    content: "";
-    width: var(--link-size);
-    height: var(--link-size);
-    position: absolute;
-    transform: translate(0, var(--link-size));
-    border-radius: 50%;
-    transition: var(--trans-props);
-    
-  }
-  
-  .socialicon.kaggle:after {
-    background-color: #41aff3;
-    box-shadow: var(--kaggle);
-  }
-  
-  
    /*
   ---------------------------
      LINKEDIN MICROANIMATION
@@ -274,33 +246,6 @@ html[data-theme="light"] {
         }
   }
   
-  
-  /*
-  ---------------------------
-     TWITTER MICROANIMATION
-  ---------------------------
-  */
-  .twitter-icon{
-    width: 40px;
-    margin-left: 12px;
-  }
-  
-  .twitter:hover #wing1{
-        transform-origin:center;
-        animation: flap 0.4s ease-out infinite alternate;
-     }	
-     
-  .twitter:hover #wing2{
-      transform-origin:center;
-      animation: flap 0.4s ease-in infinite alternate;
-   }		
-  
-  @keyframes flap{
-       50%{
-        transform:scaleX(-1) rotate(-45deg) translate(-40px,-40px);
-       }
-     }
-  
   /*
   --------------------------
      GITHUB MICROANIMATION
@@ -327,104 +272,6 @@ html[data-theme="light"] {
     100% { transform: rotate(-10deg); }
    }
   
-   /*
-    --------------------------
-       DRIBBBLE MICROANIMATION
-    --------------------------
-    */
-    
-    .dribbble-icon{
-      width: 30px;
-      height: 30px;
-      margin-left:16px;
-      margin-top: 20px;
-    }
-    
-    .dribbble:hover .dribbble-icon{ 
-        animation: dribbble-bounce .4s ease infinite;
-        transform: rotate(360deg);
-        transition: all 9s ease-in-out 0s;
-    }
-    
-    @keyframes dribbble-bounce {
-      from, to {
-        margin-top: 20px;
-      }
-      50% { 
-        margin-top: 15px; 
-      }
-      
-      75%{
-        margin-top: 15px;
-      }
-    }
-    
-    /*
-    --------------------------
-       CODEFORCES MICROANIMATION
-    --------------------------
-    */
-    
-    .codeforces-icon{
-      margin-right: 6px;
-      margin-top: 6px;
-    }
-    
-    .codeforces-icon .red {
-      height:4px;
-      y:2.5px;
-      
-    }
-    .codeforces:hover .red{
-      animation: red-animation 2.5s infinite alternate;
-    }
-    
-    
-    .codeforces-icon .yellow{
-      height:5px;
-      y:1.5px;
-      
-    }
-    
-    .codeforces:hover .yellow{
-      animation: yellow-animation 2s infinite alternate-reverse;
-    }
-    
-    .codeforces:hover .blue{
-      animation: blue-animation 2s  infinite alternate;
-    }
-    
-    @keyframes red-animation{
-      0%{
-         y:0px
-      }
-      0%{
-          height:6px;
-          y:0.5px;
-      }
-    }
-    
-    @keyframes yellow-animation{
-      0%{
-          y:0px;
-      }
-      0%{
-          height:6px;
-          y:0.5px;
-      }
-    }
-    
-    @keyframes blue-animation{
-      0%{
-          y:0px;
-      }
-      0%{
-          height:3px;
-          y:3.5;
-      }
-    }
-    
-    
   
   /*
   ----------------------------
