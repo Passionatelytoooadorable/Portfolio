@@ -47,40 +47,6 @@ document.addEventListener("DOMContentLoaded", showCards2);
 
 // Github screen (project)
 
-const volunteership = document.querySelector(".volunteership");
-const volunteershipcards = [
-  {
-    title: "Nhaac Restaurant Website",
-   /* cardImage: "assets/images/experience-page/1.jpg",*/
-    cardImage: "assets/images/designs/ProjetoPizza.png",
-    description:
-      "Responsible for handling the projects GirlScript App and GirlScript Website Boilerplate.",
-  },
-  {
-    title: "Registration Form",
-  /*  cardImage: "assets/images/experience-page/2.jpg", */
-    cardImage: "assets/images/designs/Blog_dark_light.png",
-    description: "Registration Form to receive newsletter",
-  },
-  {
-    title: "Landing Page Nike",
-    /* cardImage: "assets/images/experience-page/3.jpg", */
-    cardImage: "assets/images/designs/Projeto_Chuteira.jpg",
-    description:
-      "Landing Page Football Boots Nike ",
-  },
-  {
-    title: "Tutorial Rest API (In Developing)",
-    cardImage: "assets/images/designs/rest_tutorial.png",
-    description:"REST API  tutorial for all levels: What is Rest?, HTTP methods, Resource Name, IdemPotence...",
-  },
-  {
-    title: "BMI calculator",
-    cardImage:"assets/images/designs/BMI Calculator.jpg",
-    description:"BMI Calculator app. Developed using Flutter",
-  },
-];
-
 /* const showCards = () => {
   let output = "";
   volunteershipcards.forEach(
