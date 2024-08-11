@@ -3,797 +3,788 @@
 
 <head>
     <style type="text/css">
-      .swal-icon--error{
-        border-color:#f27474;
-        -webkit-animation:animateErrorIcon .5s;
-        animation:animateErrorIcon .5s
-      }
-      .swal-icon--error__x-mark{
-        position:relative;
-        display:block;
-        -webkit-animation:animateXMark .5s;
-        animation:animateXMark .5s
-      }
-      .swal-icon--error__line{
-        position:absolute;
-        height:5px;
-        width:47px;
-        background-color:#f27474;
-        display:block;
-        top:37px;
-        border-radius:2px
-      }
-      .swal-icon--error__line--left{
-        -webkit-transform:rotate(45deg);
-        transform:rotate(45deg);
-        left:17px
-      }
+        .swal-icon--error{
+            border-color:#f27474;
+            -webkit-animation:animateErrorIcon .5s;
+            animation:animateErrorIcon .5s
+        }
+        .swal-icon--error__x-mark{
+            position:relative;
+            display:block;
+            -webkit-animation:animateXMark .5s;
+            animation:animateXMark .5s
+        }
+        .swal-icon--error__line{
+            position:absolute;
+            height:5px;
+            width:47px;
+            background-color:#f27474;
+            display:block;
+            top:37px;
+            border-radius:2px
+        }
+        .swal-icon--error__line--left{
+            -webkit-transform:rotate(45deg);
+            transform:rotate(45deg);
+            left:17px
+        }
         .swal-icon--error__line--right{
-          -webkit-transform:rotate(-45deg);
-          transform:rotate(-45deg);
-          right:16px
-      }
-      @-webkit-keyframes animateErrorIcon{
-        0%{
-          -webkit-transform:rotateX(100deg);
-          transform:rotateX(100deg);
-          opacity:0
+            -webkit-transform:rotate(-45deg);
+            transform:rotate(-45deg);
+            right:16px
         }
-        to{
-          -webkit-transform:rotateX(0deg);
-          transform:rotateX(0deg);
-          opacity:1
+        @-webkit-keyframes animateErrorIcon{
+            0%{
+                -webkit-transform:rotateX(100deg);
+                transform:rotateX(100deg);
+                opacity:0
+            }
+            to{
+                -webkit-transform:rotateX(0deg);
+                transform:rotateX(0deg);
+                opacity:1
+            }
         }
-      }
-      @keyframes animateErrorIcon{
-        0%{
-          -webkit-transform:rotateX(100deg);
-          transform:rotateX(100deg);
-          opacity:0
+        @keyframes animateErrorIcon{
+            0%{
+                -webkit-transform:rotateX(100deg);
+                transform:rotateX(100deg);
+                opacity:0
+            }
+            to{
+                -webkit-transform:rotateX(0deg);
+                transform:rotateX(0deg);
+                opacity:1
+            }
         }
-        to{
-          -webkit-transform:rotateX(0deg);
-          transform:rotateX(0deg);
-          opacity:1
+        @-webkit-keyframes animateXMark{
+            0%{
+                -webkit-transform:scale(.4);
+                transform:scale(.4);
+                margin-top:26px;
+                opacity:0
+            }
+            50%{
+                -webkit-transform:scale(.4);
+                transform:scale(.4);
+                margin-top:26px;
+                opacity:0
+            }
+            80%{
+                -webkit-transform:scale(1.15);
+                transform:scale(1.15);
+                margin-top:-6px
+            }
+            to{
+                -webkit-transform:scale(1);
+                transform:scale(1);
+                margin-top:0;
+                opacity:1
+            }
         }
-      }
-      @-webkit-keyframes animateXMark{
-        0%{
-          -webkit-transform:scale(.4);
-          transform:scale(.4);
-          margin-top:26px;
-          opacity:0
+        @keyframes animateXMark{
+            0%{
+                -webkit-transform:scale(.4);
+                transform:scale(.4);
+                margin-top:26px;
+                opacity:0
+            }
+            50%{
+                -webkit-transform:scale(.4);
+                transform:scale(.4);
+                margin-top:26px;
+                opacity:0
+            }
+            80%{
+                -webkit-transform:scale(1.15);
+                transform:scale(1.15);
+                margin-top:-6px
+            }
+            to{
+                -webkit-transform:scale(1);
+                transform:scale(1);
+                margin-top:0;
+                opacity:1
+            }
         }
-        50%{
-          -webkit-transform:scale(.4);
-          transform:scale(.4);
-          margin-top:26px;
-          opacity:0
+        .swal-icon--warning{
+            border-color:#f8bb86;
+            -webkit-animation:pulseWarning .75s infinite alternate;
+            animation:pulseWarning .75s infinite alternate
         }
-        80%{
-          -webkit-transform:scale(1.15);
-          transform:scale(1.15);
-          margin-top:-6px
+        .swal-icon--warning__body{
+            width:5px;
+            height:47px;
+            top:10px;
+            border-radius:2px;
+            margin-left:-2px
         }
-        to{
-          -webkit-transform:scale(1);
-          transform:scale(1);
-          margin-top:0;
-          opacity:1
+        .swal-icon--warning__body,.swal-icon--warning__dot{
+            position:absolute;
+            left:50%;
+            background-color:#f8bb86
         }
-      }
-      @keyframes animateXMark{
-        0%{
-          -webkit-transform:scale(.4);
-          transform:scale(.4);
-          margin-top:26px;
-          opacity:0
+        .swal-icon--warning__dot{
+            width:7px;
+            height:7px;
+            border-radius:50%;
+            margin-left:-4px;
+            bottom:-11px
         }
-        50%{
-          -webkit-transform:scale(.4);
-          transform:scale(.4);
-          margin-top:26px;
-          opacity:0
+        @-webkit-keyframes pulseWarning{
+            0%{
+                border-color:#f8d486
+            }
+            to{
+                border-color:#f8bb86
+            }
         }
-        80%{
-          -webkit-transform:scale(1.15);
-          transform:scale(1.15);
-          margin-top:-6px
+        @keyframes pulseWarning{
+            0%{
+                border-color:#f8d486
+            }
+            to{
+                border-color:#f8bb86
+            }
         }
-        to{
-          -webkit-transform:scale(1);
-          transform:scale(1);
-          margin-top:0;
-          opacity:1
+        .swal-icon--success{
+            border-color:#a5dc86
         }
-      }
-      .swal-icon--warning{
-        border-color:#f8bb86;
-        -webkit-animation:pulseWarning .75s infinite alternate;
-        animation:pulseWarning .75s infinite alternate
-    }
-    .swal-icon--warning__body{
-      width:5px;
-      height:47px;
-      top:10px;
-      border-radius:2px;
-      margin-left:-2px
-    }
-    .swal-icon--warning__body,.swal-icon--warning__dot{
-      position:absolute;
-      left:50%;
-      background-color:#f8bb86
-    }
-    .swal-icon--warning__dot{
-      width:7px;
-      height:7px;
-      border-radius:50%;
-      margin-left:-4px;
-      bottom:-11px
-    }
-    @-webkit-keyframes pulseWarning{
-      0%{
-        border-color:#f8d486
-      }
-      to{
-        border-color:#f8bb86
-      }
-    }
-    @keyframes pulseWarning{
-      0%{
-        border-color:#f8d486
-      }
-      to{
-        border-color:#f8bb86
-      }
-    }
-    .swal-icon--success{
-      border-color:#a5dc86
-    }
-    .swal-icon--success:after,.swal-icon--success:before{
-      
-      content:"";
-      border-radius:50%;
-      position:absolute;
-      width:60px;
-      height:120px;
-      background:#fff;
-      -webkit-transform:rotate(45deg);
-      transform:rotate(45deg)
-    }
-    .swal-icon--success:before{
-      border-radius:120px 0 0 120px;
-      top:-7px;
-      left:-33px;
-      -webkit-transform:rotate(-45deg);
-      transform:rotate(-45deg);
-      -webkit-transform-origin:60px 60px;
-      transform-origin:60px 60px
-    }
-    .swal-icon--success:after{
-      border-radius:0 120px 120px 0;
-      top:-11px;
-      left:30px;
-      -webkit-transform:rotate(-45deg);
-      transform:rotate(-45deg);
-      -webkit-transform-origin:0 60px;
-      transform-origin:0 60px;
-      -webkit-animation:rotatePlaceholder 4.25s ease-in;
-      animation:rotatePlaceholder 4.25s ease-in
-    }
-    .swal-icon--success__ring{
-      width:80px;
-      height:80px;
-      border:4px solid hsla(98,55%,69%,.2);
-      border-radius:50%;
-      box-sizing:content-box;
-      position:absolute;
-      left:-4px;
-      top:-4px;
-      z-index:2
-    }
-    .swal-icon--success__hide-corners{
-      width:5px;
-      height:90px;
-      background-color:#fff;
-      padding:1px;
-      position:absolute;
-      left:28px;
-      top:8px;
-      z-index:1;
-      -webkit-transform:rotate(-45deg);
-      transform:rotate(-45deg)
-    }
-    .swal-icon--success__line{
-      height:5px;
-      background-color:#a5dc86;
-      display:block;
-      border-radius:2px;
-      position:absolute;
-      z-index:2
-    }
-    .swal-icon--success__line--tip{
-      width:25px;
-      left:14px;
-      top:46px;
-      -webkit-transform:rotate(45deg);
-      transform:rotate(45deg);
-      -webkit-animation:animateSuccessTip .75s;
-      animation:animateSuccessTip .75s
-    }
-    .swal-icon--success__line--long{
-      width:47px;
-      right:8px;
-      top:38px;
-      -webkit-transform:rotate(-45deg);
-      transform:rotate(-45deg);
-      -webkit-animation:animateSuccessLong .75s;
-      animation:animateSuccessLong .75s
-    }
-    @-webkit-keyframes rotatePlaceholder{
-      0%{
-        -webkit-transform:rotate(-45deg);
-        transform:rotate(-45deg)
-      }
-      5%{
-        -webkit-transform:rotate(-45deg);
-        transform:rotate(-45deg)
-      }
-      12%{
-        -webkit-transform:rotate(-405deg);
-        transform:rotate(-405deg)
-      }
-      to{
-        -webkit-transform:rotate(-405deg);
-        transform:rotate(-405deg)
-      }
-    }
-    @keyframes rotatePlaceholder{
-      0%{
-        -webkit-transform:rotate(-45deg);
-        transform:rotate(-45deg)
-      }
-      5%{
-        -webkit-transform:rotate(-45deg);
-        transform:rotate(-45deg)
-      }
-      12%{
-        -webkit-transform:rotate(-405deg);
-        transform:rotate(-405deg)
-      }
-      to{
-        -webkit-transform:rotate(-405deg);
-        transform:rotate(-405deg)
-      }
-    }
-    @-webkit-keyframes animateSuccessTip{
-      0%{
-        width:0;
-        left:1px;
-        top:19px
-      }
-      54%{
-        width:0;
-        left:1px;
-        top:19px
-      }
-      70%{
-        width:50px;
-        left:-8px;
-        top:37px
-      }
-      84%{
-        width:17px;
-        left:21px;
-        top:48px
-      }
-      to{
-        width:25px;
-        left:14px;
-        top:45px
-      }
-    }
-    @keyframes animateSuccessTip{
-      0%{
-        width:0;
-        left:1px;
-        top:19px
-      }
-      54%{
-        width:0;
-        left:1px;
-        top:19px
-      }
-      70%{
-        width:50px;
-        left:-8px;
-        top:37px
-      }
-      84%{
-        width:17px;
-        left:21px;
-        top:48px
-      }
-      to{
-        width:25px;
-        left:14px;
-        top:45px
-      }
-    }
-    @-webkit-keyframes animateSuccessLong{
-      0%{
-        width:0;
-        right:46px;
-        top:54px
-      }
-      65%{
-        width:0;
-        right:46px;
-        top:54px
-      }
-      84%{
-        width:55px;
-        right:0;
-        top:35px
-      }
-      to{
-        width:47px;
-        right:8px;
-        top:38px
-      }
-    }
-    @keyframes animateSuccessLong{
-      0%{
-        width:0;
-        right:46px;
-        top:54px
-      }
-      65%{
-        width:0;
-        right:46px;
-        top:54px
-      }
-      84%{
-        width:55px;
-        right:0;
-        top:35px
-      }
-      to{
-        width:47px;
-        right:8px;
-        top:38px
-      }
-    }
-    .swal-icon--info{
-      border-color:#c9dae1
-    }
-    .swal-icon--info:before{
-      width:5px;
-      height:29px;
-      bottom:17px;
-      border-radius:2px;
-      margin-left:-2px
-    }
-    .swal-icon--info:after,.swal-icon--info:before{
-      content:"";
-      position:absolute;
-      left:50%;
-      background-color:#c9dae1
-    }
-    .swal-icon--info:after{
-      width:7px;
-      height:7px;
-      border-radius:50%;
-      margin-left:-3px;
-      top:19px
-    }
-    .swal-icon{
-      width:80px;
-      height:80px;
-      border-width:4px;
-      border-style:solid;
-      border-radius:50%;
-      padding:0;
-      position:relative;
-      box-sizing:content-box;
-      margin:20px auto
-    }
-    .swal-icon:first-child{
-      margin-top:32px
-    }
-    .swal-icon--custom{
-      width:auto;
-      height:auto;
-      max-width:100%;
-      border:none;
-      border-radius:0
-    }
-    .swal-icon img{
-      max-width:100%;
-      max-height:100%
-    }
-    .swal-title{
-      color:rgba(0,0,0,.65);
-      font-weight:600;
-      text-transform:none;
-      position:relative;
-      display:block;
-      padding:13px 16px;
-      font-size:27px;
-      line-height:normal;
-      text-align:center;
-      margin-bottom:0
-    }
-    .swal-title:first-child{
-      margin-top:26px
-    }
-    .swal-title:not(:first-child){
-      padding-bottom:0
-    }
-    .swal-title:not(:last-child){
-      margin-bottom:13px
-    }
-    .swal-text{
-      font-size:16px;
-      position:relative;
-      float:none;
-      line-height:normal;
-      vertical-align:top;
-      text-align:left;
-      display:inline-block;
-      margin:0;
-      padding:0 10px;
-      font-weight:400;
-      color:rgba(0,0,0,.64);
-      max-width:calc(100% - 20px);
-      overflow-wrap:break-word;
-      box-sizing:border-box
-    }
-    .swal-text:first-child{
-      margin-top:45px
-    }
-    .swal-text:last-child{
-      margin-bottom:45px
-    }
-    .swal-footer{
-      text-align:right;
-      padding-top:13px;
-      margin-top:13px;
-      padding:13px 16px;
-      border-radius:inherit;
-      border-top-left-radius:0;
-      border-top-right-radius:0
-    }
-    .swal-button-container{
-      margin:5px;
-      display:inline-block;
-      position:relative
-    }
-    .swal-button{
-      background-color:#7cd1f9;
-      color:#fff;
-      border:none;
-      box-shadow:none;
-      border-radius:5px;
-      font-weight:600;
-      font-size:14px;
-      padding:10px 24px;
-      margin:0;
-      cursor:pointer
-    }
-    .swal-button:not([disabled]):hover{
-      background-color:#78cbf2
-    }
-    .swal-button:active{
-      background-color:#70bce0
-    }
-    .swal-button:focus{
-      outline:none;
-      box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)
-    }
-    .swal-button[disabled]{
-      opacity:.5;
-      cursor:default
-    }
-    .swal-button::-moz-focus-inner{
-      border:0
-    }
-    .swal-button--cancel{
-      color:#555;
-      background-color:#efefef
-    }
-    .swal-button--cancel:not([disabled]):hover{
-      background-color:#e8e8e8
-    }
-    .swal-button--cancel:active{
-      background-color:#d7d7d7
-    }
-    .swal-button--cancel:focus{
-      box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)
-    }
-    .swal-button--danger{
-      background-color:#e64942
-    }
-    .swal-button--danger:not([disabled]):hover{
-      background-color:#df4740
-    }
-    .swal-button--danger:active{
-      background-color:#cf423b
-    }
-    .swal-button--danger:focus{
-      box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)
-    }
-    .swal-content{
-      padding:0 20px;
-      margin-top:20px;
-      font-size:medium
-    }
-    .swal-content:last-child{
-      margin-bottom:20px
-    }
-    .swal-content__input,.swal-content__textarea{
-      appearance:none;
-      background-color:#fff;
-      border:none;
-      font-size:14px;
-      display:block;
-      box-sizing:border-box;
-      width:100%;
-      border:1px solid rgba(0,0,0,.14);
-      padding:10px 13px;
-      border-radius:2px;
-      transition:border-color .2s
-    }
-    .swal-content__input:focus,.swal-content__textarea:focus{
-      outline:none;
-      border-color:#6db8ff
-    }
-    .swal-content__textarea{
-      resize:vertical
-    }
-    .swal-button--loading{
-      color:transparent
-    }
-    .swal-button--loading~.swal-button__loader{
-      opacity:1
-    }
-    .swal-button__loader{
-      position:absolute;
-      height:auto;
-      width:43px;
-      z-index:2;
-      left:50%;
-      top:50%;
-      -webkit-transform:translateX(-50%) translateY(-50%);
-      transform:translateX(-50%) translateY(-50%);
-      text-align:center;
-      pointer-events:none;
-      opacity:0
-    }
-    .swal-button__loader div{
-      display:inline-block;
-      float:none;
-      vertical-align:baseline;
-      width:9px;
-      height:9px;
-      padding:0;
-      border:none;
-      margin:2px;
-      opacity:.4;
-      border-radius:7px;
-      background-color:hsla(0,0%,100%,.9);
-    
-      -webkit-animation:swal-loading-anim 1s infinite;
-      animation:swal-loading-anim 1s infinite
-    }
-    .swal-button__loader div:nth-child(3n+2){
-      -webkit-animation-delay:.15s;
-      animation-delay:.15s
-    }
-    .swal-button__loader div:nth-child(3n+3){
-      -webkit-animation-delay:.3s;
-      animation-delay:.3s
-    }
-    @-webkit-keyframes swal-loading-anim{
-      0%{
-        opacity:.4
-      }
-      20%{
-        opacity:.4
-      }
-      50%{
-        opacity:1
-      }
-      to{
-        opacity:.4
-      }
-    }
-    @keyframes swal-loading-anim{
-      0%{
-        opacity:.4
-      }
-      20%{
-        opacity:.4
-      }
-      50%{
-        opacity:1
-      }
-      to{
-        opacity:.4
-      }
-    }
-    .swal-overlay{
-      position:fixed;
-      top:0;
-      bottom:0;
-      left:0;
-      right:0;
-      text-align:center;
-      font-size:0;
-      overflow-y:auto;
-      background-color:rgba(0,0,0,.4);
-      z-index:10000;
-      pointer-events:none;
-      opacity:0;
-      transition:opacity .3s
-    }
-    .swal-overlay:before{
-      content:" ";
-      display:inline-block;
-      vertical-align:middle;
-      height:100%
-    }
-    .swal-overlay--show-modal{
-      opacity:1;
-      pointer-events:auto
-    }
-    .swal-overlay--show-modal .swal-modal{
-      opacity:1;
-      pointer-events:auto;
-      box-sizing:border-box;
-      -webkit-animation:showSweetAlert .3s;
-      animation:showSweetAlert .3s;
-      will-change:transform
-    }
-    .swal-modal{
-      width:478px;
-      opacity:0;
-      pointer-events:none;
-      background-color:#fff;
-      text-align:center;
-      border-radius:5px;
-      position:static;
-      margin:20px auto;
-      display:inline-block;
-      vertical-align:middle;
-      -webkit-transform:scale(1);
-      transform:scale(1);
-      -webkit-transform-origin:50% 50%;
-      transform-origin:50% 50%;
-      z-index:10001;
-      transition:opacity .2s,-webkit-transform .3s;
-      transition:transform .3s,opacity .2s;
-      transition:transform .3s,opacity .2s,-webkit-transform .3s
-    }
-    @media (max-width:500px){
-      .swal-modal{
-        width:calc(100% - 20px)
-      }
-    }
-    @-webkit-keyframes showSweetAlert{
-      0%{
-        -webkit-transform:scale(1);
-        transform:scale(1)
-      }
-      1%{
-        -webkit-transform:scale(.5);
-        transform:scale(.5)
-      }
-      45%{
-        -webkit-transform:scale(1.05);
-        transform:scale(1.05)
-      }
-      80%{
-        -webkit-transform:scale(.95);
-        transform:scale(.95)
-      }
-      to{
-        -webkit-transform:scale(1);
-        transform:scale(1)
-      }
-    }
-    @keyframes showSweetAlert{
-      0%{
-        -webkit-transform:scale(1);
-        transform:scale(1)
-      }
-      1%{
-        -webkit-transform:scale(.5);
-        transform:scale(.5)
-      }
-      45%{
-        -webkit-transform:scale(1.05);
-        transform:scale(1.05)
-      }
-      80%{
-        -webkit-transform:scale(.95);
-        transform:scale(.95)
-      }
-      to{
-        -webkit-transform:scale(1);
-        transform:scale(1)
-      }
-    }
+        .swal-icon--success:after,.swal-icon--success:before{
+            content:"";
+            border-radius:50%;
+            position:absolute;
+            width:60px;
+            height:120px;
+            background:#fff;
+            -webkit-transform:rotate(45deg);
+            transform:rotate(45deg)
+        }
+        .swal-icon--success:before{
+            border-radius:120px 0 0 120px;
+            top:-7px;
+            left:-33px;
+            -webkit-transform:rotate(-45deg);
+            transform:rotate(-45deg);
+            -webkit-transform-origin:60px 60px;
+            transform-origin:60px 60px
+        }
+        .swal-icon--success:after{
+            border-radius:0 120px 120px 0;
+            top:-11px;
+            left:30px;
+            -webkit-transform:rotate(-45deg);
+            transform:rotate(-45deg);
+            -webkit-transform-origin:0 60px;
+            transform-origin:0 60px;
+            -webkit-animation:rotatePlaceholder 4.25s ease-in;
+            animation:rotatePlaceholder 4.25s ease-in
+        }
+        .swal-icon--success__ring{
+            width:80px;
+            height:80px;
+            border:4px solid hsla(98,55%,69%,.2);
+            border-radius:50%;
+            box-sizing:content-box;
+            position:absolute;
+            left:-4px;
+            top:-4px;
+            z-index:2
+        }
+        .swal-icon--success__hide-corners{
+            width:5px;
+            height:90px;
+            background-color:#fff;
+            padding:1px;
+            position:absolute;
+            left:28px;
+            top:8px;
+            z-index:1;
+            -webkit-transform:rotate(-45deg);
+            transform:rotate(-45deg)
+        }
+        .swal-icon--success__line{
+            height:5px;
+            background-color:#a5dc86;
+            display:block;
+            border-radius:2px;
+            position:absolute;
+            z-index:2
+        }
+        .swal-icon--success__line--tip{
+            width:25px;
+            left:14px;
+            top:46px;
+            -webkit-transform:rotate(45deg);
+            transform:rotate(45deg);
+            -webkit-animation:animateSuccessTip .75s;
+            animation:animateSuccessTip .75s
+        }
+        .swal-icon--success__line--long{
+            width:47px;
+            right:8px;
+            top:38px;
+            -webkit-transform:rotate(-45deg);
+            transform:rotate(-45deg);
+            -webkit-animation:animateSuccessLong .75s;
+            animation:animateSuccessLong .75s
+        }
+        @-webkit-keyframes rotatePlaceholder{
+            0%{
+                -webkit-transform:rotate(-45deg);
+                transform:rotate(-45deg)
+            }
+            5%{
+                -webkit-transform:rotate(-45deg);
+                transform:rotate(-45deg)
+            }
+            12%{
+                -webkit-transform:rotate(-405deg);
+                transform:rotate(-405deg)
+            }
+            to{
+                -webkit-transform:rotate(-405deg);
+                transform:rotate(-405deg)
+            }
+        }
+        @keyframes rotatePlaceholder{
+            0%{
+                -webkit-transform:rotate(-45deg);
+                transform:rotate(-45deg)
+            }
+            5%{
+                -webkit-transform:rotate(-45deg);
+                transform:rotate(-45deg)
+            }
+            12%{
+                -webkit-transform:rotate(-405deg);
+                transform:rotate(-405deg)
+            }
+            to{
+                -webkit-transform:rotate(-405deg);
+                transform:rotate(-405deg)
+            }
+        }
+        @-webkit-keyframes animateSuccessTip{
+            0%{
+                width:0;
+                left:1px;
+                top:19px
+            }
+            54%{
+                width:0;
+                left:1px;
+                top:19px
+            }
+            70%{
+                width:50px;
+                left:-8px;
+                top:37px
+            }
+            84%{
+                width:17px;
+                left:21px;
+                top:48px
+            }
+            to{
+                width:25px;
+                left:14px;
+                top:45px
+            }
+        }
+        @keyframes animateSuccessTip{
+            0%{
+                width:0;
+                left:1px;
+                top:19px
+            }
+            54%{
+                width:0;
+                left:1px;
+                top:19px
+            }
+            70%{
+                width:50px;
+                left:-8px;
+                top:37px
+            }
+            84%{
+                width:17px;
+                left:21px;
+                top:48px
+            }
+            to{
+                width:25px;
+                left:14px;
+                top:45px
+            }
+        }
+        @-webkit-keyframes animateSuccessLong{
+            0%{
+                width:0;
+                right:46px;
+                top:54px
+            }
+            65%{
+                width:0;
+                right:46px;
+                top:54px
+            }
+            84%{
+                width:55px;
+                right:0;
+                top:35px
+            }
+            to{
+                width:47px;
+                right:8px;
+                top:38px
+            }
+        }
+        @keyframes animateSuccessLong{
+            0%{
+                width:0;
+                right:46px;
+                top:54px
+            }
+            65%{
+                width:0;
+                right:46px;
+                top:54px
+            }
+            84%{
+                width:55px;
+                right:0;
+                top:35px
+            }
+            to{
+                width:47px;
+                right:8px;
+                top:38px
+            }
+        }
+        .swal-icon--info{
+            border-color:#c9dae1
+        }
+        .swal-icon--info:before{
+            width:5px;
+            height:29px;
+            bottom:17px;
+            border-radius:2px;
+            margin-left:-2px
+        }
+        .swal-icon--info:after,.swal-icon--info:before{
+            content:"";
+            position:absolute;
+            left:50%;
+            background-color:#c9dae1
+        }
+        .swal-icon--info:after{
+            width:7px;
+            height:7px;
+            border-radius:50%;
+            margin-left:-3px;
+            top:19px
+        }
+        .swal-icon{
+            width:80px;
+            height:80px;
+            border-width:4px;
+            border-style:solid;
+            border-radius:50%;
+            padding:0;
+            position:relative;
+            box-sizing:content-box;
+            margin:20px auto
+        }
+        .swal-icon:first-child{
+            margin-top:32px
+        }
+        .swal-icon--custom{
+            width:auto;
+            height:auto;
+            max-width:100%;
+            border:none;
+            border-radius:0
+        }
+        .swal-icon img{
+            max-width:100%;
+            max-height:100%
+        }
+        .swal-title{
+            color:rgba(0,0,0,.65);
+            font-weight:600;
+            text-transform:none;
+            position:relative;
+            display:block;
+            padding:13px 16px;
+            font-size:27px;
+            line-height:normal;
+            text-align:center;
+            margin-bottom:0
+        }
+        .swal-title:first-child{
+            margin-top:26px
+        }
+        .swal-title:not(:first-child){
+            padding-bottom:0
+        }
+        .swal-title:not(:last-child){
+            margin-bottom:13px
+        }
+        .swal-text{
+            font-size:16px;
+            position:relative;
+            float:none;
+            line-height:normal;
+            vertical-align:top;
+            text-align:left;
+            display:inline-block;
+            margin:0;
+            padding:0 10px;
+            font-weight:400;
+            color:rgba(0,0,0,.64);
+            max-width:calc(100% - 20px);
+            overflow-wrap:break-word;
+            box-sizing:border-box
+        }
+        .swal-text:first-child{
+            margin-top:45px
+        }
+        .swal-text:last-child{
+            margin-bottom:45px
+        }
+        .swal-footer{
+            text-align:right;
+            padding-top:13px;
+            margin-top:13px;
+            padding:13px 16px;
+            border-radius:inherit;
+            border-top-left-radius:0;
+            border-top-right-radius:0
+        }
+        .swal-button-container{
+            margin:5px;
+            display:inline-block;
+            position:relative
+        }
+        .swal-button{
+            background-color:#7cd1f9;
+            color:#fff;
+            border:none;
+            box-shadow:none;
+            border-radius:5px;
+            font-weight:600;
+            font-size:14px;
+            padding:10px 24px;
+            margin:0;
+            cursor:pointer
+        }
+        .swal-button:not([disabled]):hover{
+            background-color:#78cbf2
+        }
+        .swal-button:active{
+            background-color:#70bce0
+        }
+        .swal-button:focus{
+            outline:none;
+            box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(43,114,165,.29)
+        }
+        .swal-button[disabled]{
+            opacity:.5;
+            cursor:default
+        }
+        .swal-button::-moz-focus-inner{
+            border:0
+        }
+        .swal-button--cancel{
+            color:#555;
+            background-color:#efefef
+        }
+        .swal-button--cancel:not([disabled]):hover{
+            background-color:#e8e8e8
+        }
+        .swal-button--cancel:active{
+            background-color:#d7d7d7
+        }
+        .swal-button--cancel:focus{
+            box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(116,136,150,.29)
+        }
+        .swal-button--danger{
+            background-color:#e64942
+        }
+        .swal-button--danger:not([disabled]):hover{
+            background-color:#df4740
+        }
+        .swal-button--danger:active{
+            background-color:#cf423b
+        }
+        .swal-button--danger:focus{
+            box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(165,43,43,.29)
+        }
+        .swal-content{
+            padding:0 20px;
+            margin-top:20px;
+            font-size:medium
+        }
+        .swal-content:last-child{
+            margin-bottom:20px
+        }
+        .swal-content__input,.swal-content__textarea{
+            appearance:none;
+            background-color:#fff;
+            border:none;
+            font-size:14px;
+            display:block;
+            box-sizing:border-box;
+            width:100%;
+            border:1px solid rgba(0,0,0,.14);
+            padding:10px 13px;
+            border-radius:2px;
+            transition:border-color .2s
+        }
+        .swal-content__input:focus,.swal-content__textarea:focus{
+            outline:none;
+            border-color:#6db8ff
+        }
+        .swal-content__textarea{
+            resize:vertical
+        }
+        .swal-button--loading{
+            color:transparent
+        }
+        .swal-button--loading~.swal-button__loader{
+            opacity:1
+        }
+        .swal-button__loader{
+            position:absolute;
+            height:auto;
+            width:43px;
+            z-index:2;
+            left:50%;
+            top:50%;
+            -webkit-transform:translateX(-50%) translateY(-50%);
+            transform:translateX(-50%) translateY(-50%);
+            text-align:center;
+            pointer-events:none;
+            opacity:0
+        }
+        .swal-button__loader div{
+            display:inline-block;
+            float:none;
+            vertical-align:baseline;
+            width:9px;
+            height:9px;
+            padding:0;
+            border:none;
+            margin:2px;
+            opacity:.4;
+            border-radius:7px;
+            background-color:hsla(0,0%,100%,.9);
+            -webkit-animation:swal-loading-anim 1s infinite;
+            animation:swal-loading-anim 1s infinite
+        }
+        .swal-button__loader div:nth-child(3n+2){
+            -webkit-animation-delay:.15s;
+            animation-delay:.15s
+        }
+        .swal-button__loader div:nth-child(3n+3){
+            -webkit-animation-delay:.3s;
+            animation-delay:.3s
+        }
+        @-webkit-keyframes swal-loading-anim{
+            0%{
+                opacity:.4
+            }
+            20%{
+                opacity:.4
+            }
+            50%{
+                opacity:1
+            }
+            to{
+                opacity:.4
+            }
+        }
+        @keyframes swal-loading-anim{
+            0%{
+                opacity:.4
+            }
+            20%{
+                opacity:.4
+            }
+            50%{
+                opacity:1
+            }
+            to{
+                opacity:.4
+            }
+        }
+        .swal-overlay{
+            position:fixed;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            text-align:center;
+            font-size:0;
+            overflow-y:auto;
+            background-color:rgba(0,0,0,.4);
+            z-index:10000;
+            pointer-events:none;
+            opacity:0;
+            transition:opacity .3s
+        }
+        .swal-overlay:before{
+            content:" ";
+            display:inline-block;
+            vertical-align:middle;
+            height:100%
+        }
+        .swal-overlay--show-modal{
+            opacity:1;
+            pointer-events:auto
+        }
+        .swal-overlay--show-modal .swal-modal{
+            opacity:1;
+            pointer-events:auto;
+            box-sizing:border-box;
+            -webkit-animation:showSweetAlert .3s;
+            animation:showSweetAlert .3s;
+            will-change:transform
+        }
+        .swal-modal{
+            width:478px;
+            opacity:0;
+            pointer-events:none;
+            background-color:#fff;
+            text-align:center;
+            border-radius:5px;
+            position:static;
+            margin:20px auto;
+            display:inline-block;
+            vertical-align:middle;
+            -webkit-transform:scale(1);
+            transform:scale(1);
+            -webkit-transform-origin:50% 50%;
+            transform-origin:50% 50%;
+            z-index:10001;
+            transition:opacity .2s,-webkit-transform .3s;
+            transition:transform .3s,opacity .2s;
+            transition:transform .3s,opacity .2s,-webkit-transform .3s
+        }
+        @media (max-width:500px){
+            .swal-modal{
+                width:calc(100% - 20px)
+            }
+        }
+        @-webkit-keyframes showSweetAlert{
+            0%{
+                -webkit-transform:scale(1);
+                transform:scale(1)
+            }
+            1%{
+                -webkit-transform:scale(.5);
+                transform:scale(.5)
+            }
+            45%{
+                -webkit-transform:scale(1.05);
+                transform:scale(1.05)
+            }
+            80%{
+                -webkit-transform:scale(.95);
+                transform:scale(.95)
+            }
+            to{
+                -webkit-transform:scale(1);
+                transform:scale(1)
+            }
+        }
+        @keyframes showSweetAlert{
+            0%{
+                -webkit-transform:scale(1);
+                transform:scale(1)
+            }
+            1%{
+                -webkit-transform:scale(.5);
+                transform:scale(.5)
+            }
+            45%{
+                -webkit-transform:scale(1.05);
+                transform:scale(1.05)
+            }
+            80%{
+                -webkit-transform:scale(.95);
+                transform:scale(.95)
+            }
+            to{
+                -webkit-transform:scale(1);
+                transform:scale(1)
+            }
+        }
     </style>
     <style type="text/css">
-      span.iconify, i.iconify, iconify-icon { 
-          display: inline-block; 
-          width: 1em; 
-      }
+        span.iconify, i.iconify, iconify-icon { 
+            display: inline-block; 
+            width: 1em; 
+        }
     </style>
-    <title>Srinjayi S | Projects</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- SEO -->
-    <meta name="keywords" content="free portfolio template,portfolio template, portfolio website template, open source and contribution to open source" />
-    <meta name="description" content="This project serves as a free and beautiful portfolio template for everyone who needs the perfect portfolio. Anyone can showcase their work including moocs, education, projects, experience,etc. to the world." />
-
-    <!-- Google Analytics -->
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-DLQKHF6XN5&amp;l=dataLayer&amp;cx=c"></script>
-    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-164715490-2&amp;l=dataLayer&amp;cx=c"></script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-G6D61F5TL4"></script>
+    <title>Srinjayi S | Education</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="free portfolio template,portfolio template, portfolio website template, open source, open sourcing, contributing to open source" />
+    <meta name="description" content="This project serves free and beautiful portfolio template for everyone. Anyone can showcase their work including moocs, education, projects, experience,etc. to the world." />
 
     <!-- Robot.txt -->
     <meta name="robots" content="index,follow" />
     <meta name="Googlebot" content="index,follow" />
     <meta name="AdsBot-Google" content="index,follow" />
 
-    <!-- Open Graph for Social Media -->
-    <meta property="og:site_name" content="https://portfolio.smaranjitghose.codes/projects.html" />
-    <meta property="og:title" content="Srinjayi Sarkar | Projects" />
-    <meta property="og:description" content="This project serves as a free and beautiful portfolio template for everyone who needs the perfect portfolio. Anyone can showcase their work including moocs, education, projects, experience,etc. to the world." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://portfolio-sfnx.vercel.app/projects.html" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:site_name" content="https://portfolio-sfnx.vercel.app/education.html">
+    <meta property="og:title" content="Srinjayi Sarkar | Education">
+    <meta property="og:description" content="This project serves free and beautiful portfolio template for everyone. Anyone can showcase their work including moocs, education, projects, experience,etc. to the world.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://portfolio-sfnx.vercel.app/education.html">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="https://portfolio-sfnx.vercel.app/education.html">
 
-    <!-- Twitter Posts -->
-    <meta name="twitter:site" content="https://portfolio-sfnx.vercel.app/projects.html" />
-    <meta name="application-name" content="Srinjayi Sarkar | Projects" />
-    <meta name="apple-mobile-web-app-title" content="Srinjayi Sarkar | Projects" />
+    <meta name="application-name" content="Srinjayi Sarkar | Education" />
+    <meta name="apple-mobile-web-app-title" content="Srinjayi Sarkar | Education" />
     <meta name="summary" content="An open source project aimed at providing free and beautiful templates to everyone for building their portfolio websites and showcase their work to the world." />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
     <!--For Dark/Light mode Toggle-->
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=G-DLQKHF6XN5&amp;l=dataLayer&amp;cx=c"></script>
+    <script type="text/javascript" async="" src="https://www.googletagmanager.com/gtag/js?id=UA-164715490-2&amp;l=dataLayer&amp;cx=c"></script>
     <script src="https://code.iconify.design/1/1.0.4/iconify.min.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
-    <!--Import animation.css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="css/hover-min.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <link rel="stylesheet" href="css/preloader.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    <link rel="stylesheet" type="text/css" href="css/project.css" />
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" href="css/education.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/cursor.css">
-    <link id="favicon" rel="icon" href="images/dp_female.svg" type="image/png">
-    <!--Favicon-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link id="favicon" rel="shortcut icon" href="images/dp_female.svg" type="image/x-png">
     <script defer src="js/dynamicTitle.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M11CMZ12Q"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-      gtag('config', 'G-M11CMZ12Q');
+        gtag('config', 'G-M11CMZ12Q');
     </script>
 </head>
-
-<body class="no-scroll-preload" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="overflow: visible;">
-  <nav class="navbar navbar-expand-lg fixed-top dark-theme" id="navbar">
+<body class="no-scroll-preload" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0" style="overflow: visible;"><nav class="navbar navbar-expand-lg fixed-top dark-theme" id="navbar">
     <a class="navbar-brand" href="index.html">Srinjayi Sarkar </a>
     <div class="hamburger_wrapper navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     
@@ -804,537 +795,464 @@
       </div>
     
     </div>
+    
     <div class="collapse navbar-collapse " id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto" id="navbar-content">
-        <li class="nav-item nav-item-hover"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item nav-item-hover"><a class="nav-link" href="education.html">Education</a></li>
-        <li class="nav-item nav-item-hover"><a class="nav-link" href="experience.html">Experience</a></li>
-        <li class="nav-item nav-item-hover"><a class="nav-link current-link" href="projects.html">Projects</a></li> 
-       <input type="checkbox" id="dark_toggler" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()" checked="">
-       </li>
+        <ul class="navbar-nav ml-auto" id="navbar-content">
+            <li class="nav-item nav-item-hover"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item nav-item-hover"><a class="nav-link current-link" href="education.html">Education</a></li>
+            <li class="nav-item nav-item-hover"><a class="nav-link" href="experience.html">Experience</a></li>
+            <li class="nav-item nav-item-hover"><a class="nav-link" href="projects.html">Projects</a></li> 
+    <input type="checkbox" id="dark_toggler" class="dark_toggler" aria-label="Toggle Light Mode" onclick="toggle_light_mode()" checked="">
+    </li>
        <div class="bike">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-80 0 650 400" preserveAspectRatio="xMinYMin meet">
-          <rect></rect>
-          <g>
-            <g id="man-bike">
-              <path id="Vector_2" opacity="0.1" d="M201.091 276.806L179.893 255.76L173.269 262.513L194.467 283.559L201.091 276.806Z" fill="black"></path>
-              <path id="Vector_3" opacity="0.05" d="M269.455 177.344C269.455 177.344 326.601 189.531 325.92 197.189C325.238 204.847 268.194 187.328 268.194 187.328C268.194 187.328 264.731 181.519 269.455 177.344Z" fill="black"></path>
-              <path id="Vector_4" opacity="0.1" d="M259.93 224.494C251.988 220.634 232.6 220.22 232.6 220.22L232.392 218.277L258.907 216.225L260.396 221.718C260.396 221.718 260.729 222.792 259.93 224.494Z" fill="black"></path>
-              <path id="Vector_5" opacity="0.1" d="M202.149 253.613C201.27 254.287 200.833 254.677 200.833 254.677C200.833 254.677 184.95 260.17 184.95 245.688C184.95 245.688 185.719 245.278 186.935 244.594C188.164 246.607 189.885 248.269 191.934 249.423C193.983 250.576 196.292 251.181 198.639 251.181H200.322L202.149 253.613Z" fill="black"></path>
-              <path id="Vector_6" d="M184.95 245.688C184.95 245.688 197.254 239.156 202.01 234.951C204.872 232.432 207.95 230.171 211.207 228.195L226.644 218.742L258.907 216.245L260.396 221.738C260.396 221.738 262.878 229.728 238.06 236.719C213.242 243.71 200.833 254.697 200.833 254.697C200.833 254.697 184.95 260.17 184.95 245.688Z" fill="#DB8B8B"></path>
-              <path id="Vector_7" d="M185.198 242.442L172.044 251.181L210.562 283.64C210.562 283.64 216.22 280.145 213.242 276.15C213.242 276.15 203.315 267.66 202.819 255.675L199.841 251.68H198.158C195.313 251.681 192.537 250.792 190.216 249.137C187.894 247.482 186.141 245.143 185.198 242.442V242.442Z" fill="#E5E5E5"></path>
-              <path id="Vector_8" d="M232.6 219.221C232.6 219.221 255.929 219.72 261.886 224.714L258.907 164.29H226.644L232.6 219.221Z" fill="#6A6567"></path>
-              <path id="Vector_9" d="M201.091 276.806L179.893 255.76L173.269 262.513L194.467 283.559L201.091 276.806Z" fill="#1E1F21"></path>
-              <path id="Vector_10" opacity="0.05" d="M232.6 218.971C232.6 218.971 255.929 219.471 261.886 224.464L258.907 164.04H226.644L232.6 218.971Z" fill="#535461"></path>
-              <path id="Vector_11" opacity="0.05" d="M259.93 224.494C258.55 227.436 253.79 232.27 238.06 236.699C217.903 242.377 205.931 250.682 202.149 253.613C201.27 254.287 200.833 254.677 200.833 254.677C200.833 254.677 184.95 260.17 184.95 245.688C184.95 245.688 185.719 245.278 186.935 244.594C190.623 242.562 198.431 238.102 201.995 234.931C204.857 232.411 207.934 230.15 211.192 228.175L226.629 218.722L232.377 218.277L258.892 216.225L260.382 221.718C260.382 221.718 260.729 222.792 259.93 224.494Z" fill="black"></path>
-              <path id="Vector_12" d="M251.343 182.247C251.343 182.247 309.74 180.25 310.931 187.845C312.122 195.441 252.534 192.24 252.534 192.24C252.534 192.24 247.769 187.441 251.343 182.247Z" fill="#1E1F21"></path>
-              <path id="Vector_13" opacity="0.1" d="M204.07 212.619V219.576C200.635 220.025 197.12 220.31 193.74 220.419V212.619H204.07Z" fill="black"></path>
-              <path id="Vector_14" d="M203.295 205.134C201.846 205.021 200.404 204.826 198.977 204.549C193.378 203.471 179.261 201.208 175.464 205.049C170.699 209.843 172.288 218.237 184.999 219.436C197.711 220.634 219.561 217.438 223.934 212.639C223.934 212.619 216.027 206.117 203.295 205.134Z" fill="#1E1F21"></path>
-              <path id="Vector_15" d="M233.469 290.961L311.73 213.423L316.098 219.815L241.411 298.152L233.469 290.961Z" fill="#71575D"></path>
-              <path id="Vector_16" d="M346.689 303.75L341.129 306.946L302.344 197.918L300.607 193.039L309.745 187.84L312.033 195.021L346.689 303.75Z" fill="#71575D"></path>
-              <path id="Vector_17" d="M204.07 212.624H193.74V302.951H204.07V212.624Z" fill="#71575D"></path>
-              <path id="Vector_18" d="M201.29 237.403L309.745 203.431L313.318 211.825L202.084 250.192L201.29 237.403Z" fill="#1E1F21"></path>
-              <path id="Vector_19" opacity="0.1" d="M178.363 270.347L167.761 280.11C165.883 277.685 163.761 275.462 161.427 273.478L171.325 263.076C173.873 265.293 176.228 267.726 178.363 270.347V270.347Z" fill="black"></path>
-              <path id="Vector_20" d="M252.931 203.431L307.357 184.644C307.357 184.644 316.892 185.843 313.313 193.838L258.495 210.222C258.495 210.222 250.157 211.021 252.931 203.431Z" fill="#1E1F21"></path>
-              <path id="Vector_21" opacity="0.1" d="M231.479 313.743C238.499 313.743 244.19 308.017 244.19 300.954C244.19 293.891 238.499 288.165 231.479 288.165C224.458 288.165 218.767 293.891 218.767 300.954C218.767 308.017 224.458 313.743 231.479 313.743Z" fill="black"></path>
-              <path id="Vector_22" opacity="0.1" d="M333.411 264.594C330.931 265.239 328.513 266.103 326.184 267.176L321.439 253.838C323.929 252.746 326.494 251.833 329.113 251.106L333.411 264.594Z" fill="black"></path>
-              <path id="Vector_23" opacity="0.1" d="M191.556 307.546C191.556 310.609 191.32 313.667 190.851 316.694C186.086 316.35 181.162 315.85 176.338 315.351C177.41 309.413 177.276 303.318 175.946 297.433C180.646 296.434 185.446 295.481 190.132 294.617C191.081 298.86 191.559 303.196 191.556 307.546V307.546Z" fill="black"></path>
-              <path id="Vector_24" d="M228.884 299.993L228.88 299.996C227.387 301.119 227.082 303.247 228.198 304.749L238.287 318.322C239.403 319.824 241.519 320.131 243.011 319.008L243.015 319.005C244.508 317.882 244.813 315.754 243.697 314.252L233.608 300.679C232.492 299.177 230.376 298.87 228.884 299.993Z" fill="#7F879C"></path>
-              <path id="Vector_25" d="M289.682 123.341L288.5 138.377C288.364 140.282 288.389 142.194 288.575 144.095C288.729 145.778 288.575 148.724 286.937 153.218C284.834 158.96 283.747 165.027 283.725 171.146V188.26L272.309 186.262C272.309 186.262 272.805 162.292 270.82 158.297C268.835 154.302 272.309 118.846 272.309 118.846L289.682 123.341Z" fill="#DB8B8B"></path>
-              <path id="Vector_26" d="M233.107 238.197L228.813 262.767C228.272 266.047 227.441 269.272 226.331 272.404C223.815 279.326 225.423 289.029 226.644 294.322C227.185 296.659 227.637 298.137 227.637 298.137L214.731 305.129L210.76 302.132V300.135L210.264 255.69C207.286 248.699 208.279 238.212 210.264 234.217C210.829 232.905 211.226 231.525 211.445 230.112C212.438 224.759 212.746 217.238 212.746 217.238C212.746 217.238 220.688 203.755 230.118 212.744C233.593 216.055 234.913 220.384 235.191 224.529C235.678 231.625 233.107 238.197 233.107 238.197Z" fill="#DB8B8B"></path>
-              <path id="Vector_27" d="M134.549 302.951L196.917 237.403L198.907 252.589L137.726 308.944L134.549 302.951Z" fill="#71575D"></path>
-              <path id="Vector_28" opacity="0.1" d="M235.191 224.514C228.307 228.629 216.33 229.793 211.445 230.097C212.438 224.744 212.746 217.223 212.746 217.223C212.746 217.223 220.688 203.74 230.118 212.729C233.593 216.04 234.913 220.37 235.191 224.514Z" fill="black"></path>
-              <path id="Vector_29" opacity="0.05" d="M289.096 130.792L288.5 138.377C288.366 140.28 288.393 142.191 288.58 144.09C288.734 145.773 288.58 148.719 286.942 153.218C284.839 158.96 283.752 165.027 283.73 171.146V188.26L272.314 186.262C272.314 186.262 272.81 162.292 270.825 158.297C269.42 155.466 270.75 136.854 271.649 126.232C272.021 121.863 272.314 118.846 272.314 118.846L289.687 123.341L289.096 130.792Z" fill="black"></path>
-              <path id="Vector_30" opacity="0.1" d="M254.177 156.499C253.944 158.831 253.944 160.295 253.944 160.295C253.944 160.295 242.527 169.783 223.169 155.301C203.811 140.819 186.439 144.814 186.439 144.814C186.439 144.814 186.642 143.655 187.054 141.818C188.424 138.996 189.913 137.823 189.913 137.823L251.958 149.808L254.177 156.499Z" fill="black"></path>
-              <path id="Vector_31" opacity="0.05" d="M256.058 145.029C254.779 149.51 254.069 154.136 253.944 158.796C253.944 158.796 250.926 161.293 245.367 161.793C245.21 161.475 245.09 161.14 245.009 160.794C244.017 156.3 236.571 148.31 236.571 148.31C231.608 143.815 230.615 135.825 230.615 135.825L222.425 111.605L219.695 109.358C219.695 109.358 231.111 100.37 241.038 107.86C250.966 115.351 247.987 131.331 247.987 131.331L249.973 136.824C252.033 138.572 254.127 141.653 256.058 145.029Z" fill="black"></path>
-              <path id="Vector_32" opacity="0.1" d="M312.033 195.021L302.344 197.918L300.607 193.039L309.745 187.84L312.033 195.021Z" fill="black"></path>
-              <path id="Vector_33" d="M296.373 103.84C295.077 114.003 294.645 126.811 294.645 126.811C283.229 135.8 274.295 124.315 274.295 124.315C263.514 127.226 258.446 136.719 256.058 145.004C254.779 149.485 254.069 154.111 253.944 158.772C253.944 158.772 250.926 161.268 245.367 161.768C240.11 162.212 232.575 160.834 223.169 153.778C203.811 139.296 186.439 143.291 186.439 143.291C186.439 143.291 189.913 123.316 197.855 117.323C205.797 111.331 211.753 103.84 221.68 80.8689C231.608 57.8976 251.958 63.3908 251.958 63.3908C251.958 63.3908 252.951 58.8964 271.316 63.3908C275.79 64.5703 279.93 66.777 283.413 69.8377C293.236 78.1473 298.001 91.0362 296.373 103.84Z" fill="black"></path>
-              <path id="Vector_34" d="M251.958 212.23C246.68 215.058 241.692 218.403 237.068 222.217C229.126 228.709 209.271 229.208 209.271 229.208V221.718C209.768 212.729 201.33 202.742 189.913 174.777C182.622 156.919 184.642 146.811 187.054 141.818C188.424 138.996 189.913 137.823 189.913 137.823L251.958 149.808L254.177 156.499L258.907 170.782C258.907 170.782 241.535 171.78 238.557 173.278C235.578 174.777 237.564 188.26 237.564 188.26C234.586 202.242 251.958 212.23 251.958 212.23Z" fill="#6A6567"></path>
-              <path id="Vector_35" d="M232.278 313.743C239.298 313.743 244.989 308.017 244.989 300.954C244.989 293.891 239.298 288.165 232.278 288.165C225.257 288.165 219.566 293.891 219.566 300.954C219.566 308.017 225.257 313.743 232.278 313.743Z" fill="#1E1F21"></path>
-              <path id="Vector_36" d="M277.953 74.6517C277.928 75.3159 277.873 76.0549 277.784 76.8789C276.791 85.8677 275.798 84.8689 264.879 86.8664C258.088 88.1099 254.559 82.402 252.862 77.9076C252.247 76.2795 251.784 74.5978 251.477 72.8839L275.302 68.8889C275.302 68.8889 278.156 68.0849 277.953 74.6517Z" fill="#DB8B8B"></path>
-              <path id="Vector_37" d="M281.244 63.4157C281.244 68.0512 279.413 72.4969 276.155 75.7747C272.897 79.0524 268.478 80.8939 263.871 80.8939C259.263 80.8939 254.845 79.0524 251.587 75.7747C248.329 72.4969 246.498 68.0512 246.498 63.4157C246.498 63.1261 246.498 62.8365 246.498 62.5468C246.613 57.9113 248.553 53.5115 251.892 50.3152C255.231 47.1188 259.695 45.3879 264.303 45.5031C268.91 45.6184 273.284 47.5703 276.461 50.9296C279.638 54.2888 281.358 58.7802 281.244 63.4157V63.4157Z" fill="#DB8B8B"></path>
-              <path id="Vector_38" opacity="0.1" d="M289.682 123.341L289.096 130.792C280.459 133.288 274.295 125.338 274.295 125.338C273.394 125.581 272.508 125.88 271.644 126.232C272.016 121.863 272.309 118.846 272.309 118.846L289.682 123.341Z" fill="black"></path>
-              <path id="Vector_39" opacity="0.1" d="M242.527 87.8851L249.477 115.351C249.477 115.351 228.133 118.846 223.666 115.351C219.199 111.855 210.76 110.856 210.76 110.856C210.76 110.856 219.695 84.8889 224.659 81.8926C229.622 78.8964 242.527 87.8851 242.527 87.8851Z" fill="black"></path>
-              <path id="Vector_40" opacity="0.1" d="M227.637 298.122L214.731 305.114L210.76 302.117V300.12C215.22 299.801 219.552 298.486 223.442 296.27C224.634 295.59 225.755 294.921 226.654 294.332C227.175 296.644 227.637 298.122 227.637 298.122Z" fill="black"></path>
-              <path id="Vector_41" opacity="0.05" d="M200.089 117.099C200.089 117.099 212.994 120.594 216.965 129.583C220.936 138.572 231.677 140.215 231.677 140.215" fill="black"></path>
-              <path id="Vector_42" d="M221.184 108.859L232.104 135.326C232.104 135.326 233.097 143.316 238.06 147.81C238.06 147.81 245.506 155.8 246.498 160.295C247.491 164.789 261.389 176.774 261.389 176.774C261.389 176.774 274.295 188.759 275.287 193.253C275.287 193.253 287.2 196.749 285.711 203.74C285.711 203.74 294.645 194.752 285.711 186.262C276.776 177.773 264.864 160.295 264.864 160.295C264.864 160.295 257.915 141.818 251.462 136.325L249.477 130.831C249.477 130.831 252.455 114.851 242.527 107.361C232.6 99.8702 221.184 108.859 221.184 108.859Z" fill="#DB8B8B"></path>
-              <path id="Vector_43" d="M248.732 314.851H218.95V324.34H248.732V314.851Z" fill="#1E1F21"></path>
-              <path id="Vector_44" d="M242.527 86.8864L249.477 114.352C249.477 114.352 228.133 117.848 223.666 114.352C219.199 110.856 210.76 109.858 210.76 109.858C210.76 109.858 219.695 83.8901 224.659 80.8939C229.622 77.8976 242.527 86.8864 242.527 86.8864Z" fill="black"></path>
-              <path id="Vector_45" d="M223.423 297.243C226.088 295.745 228.426 294.247 228.629 293.628C228.629 293.628 235.355 300.769 241.346 302.986C243.361 303.735 245.289 304.699 247.099 305.863C249.472 307.361 252.857 309.124 255.929 309.124C255.929 309.124 262.878 315.116 249.477 316.115C236.075 317.114 204.804 313.618 204.804 313.618L206.79 301.134C212.591 301.476 218.366 300.125 223.423 297.243Z" fill="#E5E5E5"></path>
-              <path id="Vector_46" d="M137.329 307.361C137.329 307.361 220.757 285.388 227.508 293.773C234.258 302.157 241.411 313.353 220.375 317.348C199.339 321.343 135.755 310.552 135.755 310.552L137.329 307.361Z" fill="#71575D"></path>
-              <path id="Vector_47" opacity="0.1" d="M248.732 314.851H218.95V324.34H248.732V314.851Z" fill="#1E1F21"></path>
-            </g>
-          <g id="left-wheel">
-            <path id="Vector_48" d="M135.686 358.047L132.574 309.139L132.509 309.034L129.372 310.132L114.938 352.504L91.9815 336.13L128.548 309.458L128.583 309.353L128.792 309.278L131.149 307.556L92.8104 285.928L83.4193 296.315L84.9084 306.052L128.995 306.861V307.86L84.0844 307.051L82.3868 295.995L95.2426 281.783L114.477 259.211L114.819 260.145L118.889 255.65L134.008 258.377V257.773L135.001 257.803V258.557L157.516 262.612L136.525 304.864L133.462 307.096V307.346V307.625L182.006 290.607L176.244 336.155L135.046 309.753L133.596 308.934L157.888 348.325L135.686 358.047ZM133.701 310.936L136.604 356.569L156.483 347.89L133.701 310.936ZM93.7039 336.12L114.447 350.916L128.017 311.096L93.7039 336.12ZM134.564 308.325L135.602 308.909L175.484 334.477L180.845 292.095L134.564 308.325ZM131.04 304.729L132.286 306.752L132.504 306.592L133.993 259.386L119.232 256.729L115.181 261.223L131.04 304.729ZM93.6046 285.223L130.752 306.197L130.107 305.134L114.432 262.052L95.9722 282.462L93.6046 285.223ZM135.001 259.561L133.512 305.863L135.755 304.225L156.062 263.366L135.001 259.561Z" fill="#535461"></path>
-            <path id="Vector_49" d="M132.956 313.743C136.468 313.743 139.314 310.879 139.314 307.346C139.314 303.813 136.468 300.949 132.956 300.949C129.444 300.949 126.598 303.813 126.598 307.346C126.598 310.879 129.444 313.743 132.956 313.743Z" fill="#1E1F21"></path>
-            <path id="Vector_50" d="M190.132 294.607C188.141 285.708 184.111 277.401 178.363 270.347C176.229 267.726 173.876 265.293 171.33 263.076C161.538 254.571 149.217 249.578 136.3 248.88C123.383 248.181 110.601 251.818 99.9599 259.218C89.3191 266.619 81.4219 277.365 77.5077 289.769C73.5935 302.173 73.8838 315.534 78.3331 327.754C82.7824 339.975 91.1389 350.363 102.091 357.288C113.043 364.214 125.971 367.285 138.845 366.02C151.72 364.754 163.812 359.224 173.225 350.296C182.637 341.369 188.837 329.55 190.851 316.694C191.32 313.667 191.556 310.609 191.556 307.546C191.56 303.193 191.082 298.853 190.132 294.607ZM132.956 351.71C123.906 351.701 115.079 348.887 107.675 343.653C100.27 338.418 94.648 331.016 91.5724 322.453C88.4968 313.89 88.1171 304.582 90.4849 295.795C92.8527 287.007 97.8531 279.167 104.806 273.339C111.759 267.512 120.328 263.98 129.346 263.224C138.365 262.468 147.396 264.526 155.211 269.116C163.027 273.706 169.247 280.606 173.027 288.879C176.807 297.151 177.963 306.394 176.338 315.351C174.476 325.56 169.116 334.789 161.19 341.432C153.263 348.075 143.273 351.713 132.956 351.71Z" fill="#1E1F21"></path>
-          </g>
-          <g id="right-wheel">
-            <path id="Vector_51" d="M347.23 358.247L344.122 309.358L344.058 309.253L340.921 310.352L326.482 352.704L303.525 336.325L340.102 309.653L340.137 309.548L340.345 309.473L342.703 307.75L304.364 286.122L294.968 296.509L296.457 306.247L340.534 307.036V308.035L295.623 307.226L293.935 296.185L306.786 281.978L326.005 259.421L326.348 260.355L330.418 255.86L345.577 258.592V257.988L346.569 258.017V258.772L369.084 262.826L348.073 305.099L345.011 307.331V307.581V307.86L393.56 290.841L387.797 336.389L346.599 309.987L345.15 309.169L369.442 348.564L347.23 358.247ZM345.244 311.136L348.148 356.769L368.027 348.09L345.244 311.136ZM305.252 336.325L325.995 351.121L339.566 311.301L305.252 336.325ZM346.113 308.529L347.15 309.114L387.033 334.682L392.393 292.3L346.113 308.529ZM342.589 304.934L343.835 306.956L344.053 306.796L345.542 259.591L330.78 256.924L326.73 261.418L342.589 304.934ZM305.168 285.433L342.316 306.407L341.67 305.343L325.995 262.262L307.531 282.677L305.168 285.433ZM346.55 259.77L345.061 306.057L347.304 304.419L367.61 263.561L346.55 259.77Z" fill="#535461"></path>
-            <path id="Vector_52" d="M344.505 313.943C348.016 313.943 350.863 311.079 350.863 307.546C350.863 304.013 348.016 301.149 344.505 301.149C340.993 301.149 338.146 304.013 338.146 307.546C338.146 311.079 340.993 313.943 344.505 313.943Z" fill="#1E1F21"></path>
-            <path id="Vector_53" d="M344.703 248.994C339.435 248.988 334.191 249.7 329.113 251.111C326.494 251.838 323.929 252.751 321.439 253.843C308.171 259.629 297.508 270.161 291.512 283.4C285.516 296.639 284.614 311.645 288.979 325.515C293.345 339.385 302.668 351.133 315.146 358.486C327.624 365.84 342.369 368.276 356.529 365.324C370.689 362.372 383.257 354.242 391.803 342.505C400.349 330.769 404.265 316.261 402.793 301.788C401.321 287.315 394.566 273.905 383.835 264.153C373.104 254.401 359.159 249 344.698 248.994H344.703ZM344.505 351.91C334.438 351.906 324.676 348.438 316.839 342.081C309.002 335.724 303.562 326.862 301.423 316.965C299.284 307.069 300.574 296.734 305.079 287.677C309.584 278.62 317.033 271.386 326.189 267.176C328.518 266.103 330.936 265.24 333.416 264.594C339.478 263.011 345.805 262.745 351.977 263.814C358.148 264.883 364.023 267.262 369.21 270.792C374.397 274.323 378.777 278.925 382.058 284.291C385.34 289.657 387.448 295.665 388.242 301.915C389.036 308.165 388.498 314.513 386.664 320.537C384.829 326.561 381.741 332.123 377.603 336.853C373.466 341.583 368.375 345.372 362.669 347.968C356.962 350.564 350.772 351.908 344.51 351.91H344.505Z" fill="#1E1F21"></path>
-          </g>
-          <path id="hat" d="M233.931 52.6043C234.988 55.9401 240.066 56.045 242.671 58.5019C244.026 59.7803 244.657 61.6679 246.146 62.8065C248.216 64.3945 251.204 64.045 253.839 63.6654C259.146 62.9064 264.844 62.4519 269.629 64.7541C271.326 65.568 272.85 66.7066 274.622 67.3708C276.394 68.035 278.593 68.1149 280.032 66.9363C281.184 65.9925 281.606 64.4395 282.648 63.4008C283.457 62.5818 284.584 62.1224 285.507 61.4033C287.532 59.8652 288.406 57.3583 288.982 54.9613C290.173 50.0275 290.516 44.7091 288.485 40.03C286.455 35.3508 281.571 31.5406 276.24 31.7853C274.607 31.8602 273.014 32.2846 271.386 32.4644C267.142 32.8989 262.948 31.4657 258.689 31.221C257.454 31.0697 256.2 31.2417 255.051 31.7204C254.184 32.2052 253.436 32.8792 252.862 33.6929C250.912 36.2624 249.577 39.2494 248.96 42.422C248.464 44.814 248.439 46.9813 245.525 47.3508C242.215 47.7903 231.692 45.5481 233.931 52.6043Z" fill="#472727"></path>
-        </g>
-        <defs>
-          <linearGradient id="paint0_linear" x1="432.641" y1="56.6686" x2="44.1018" y2="338.225" gradientUnits="userSpaceOnUse">
-            <stop offset="0.0001" stop-color="#490DF3"></stop>
-            <stop offset="1" stop-color="#3B49C6" stop-opacity="0.05"></stop>
-          </linearGradient>
-        </defs>
-      </svg>
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="-80 0 650 400" preserveAspectRatio="xMinYMin meet">
+         <rect></rect>
+         <g>
+           <g id="man-bike">
+             <path id="Vector_2" opacity="0.1" d="M201.091 276.806L179.893 255.76L173.269 262.513L194.467 283.559L201.091 276.806Z" fill="black"></path>
+             <path id="Vector_3" opacity="0.05" d="M269.455 177.344C269.455 177.344 326.601 189.531 325.92 197.189C325.238 204.847 268.194 187.328 268.194 187.328C268.194 187.328 264.731 181.519 269.455 177.344Z" fill="black"></path>
+             <path id="Vector_4" opacity="0.1" d="M259.93 224.494C251.988 220.634 232.6 220.22 232.6 220.22L232.392 218.277L258.907 216.225L260.396 221.718C260.396 221.718 260.729 222.792 259.93 224.494Z" fill="black"></path>
+             <path id="Vector_5" opacity="0.1" d="M202.149 253.613C201.27 254.287 200.833 254.677 200.833 254.677C200.833 254.677 184.95 260.17 184.95 245.688C184.95 245.688 185.719 245.278 186.935 244.594C188.164 246.607 189.885 248.269 191.934 249.423C193.983 250.576 196.292 251.181 198.639 251.181H200.322L202.149 253.613Z" fill="black"></path>
+             <path id="Vector_6" d="M184.95 245.688C184.95 245.688 197.254 239.156 202.01 234.951C204.872 232.432 207.95 230.171 211.207 228.195L226.644 218.742L258.907 216.245L260.396 221.738C260.396 221.738 262.878 229.728 238.06 236.719C213.242 243.71 200.833 254.697 200.833 254.697C200.833 254.697 184.95 260.17 184.95 245.688Z" fill="#DB8B8B"></path>
+             <path id="Vector_7" d="M185.198 242.442L172.044 251.181L210.562 283.64C210.562 283.64 216.22 280.145 213.242 276.15C213.242 276.15 203.315 267.66 202.819 255.675L199.841 251.68H198.158C195.313 251.681 192.537 250.792 190.216 249.137C187.894 247.482 186.141 245.143 185.198 242.442V242.442Z" fill="#E5E5E5"></path>
+             <path id="Vector_8" d="M232.6 219.221C232.6 219.221 255.929 219.72 261.886 224.714L258.907 164.29H226.644L232.6 219.221Z" fill="#6A6567"></path>
+             <path id="Vector_9" d="M201.091 276.806L179.893 255.76L173.269 262.513L194.467 283.559L201.091 276.806Z" fill="#1E1F21"></path>
+             <path id="Vector_10" opacity="0.05" d="M232.6 218.971C232.6 218.971 255.929 219.471 261.886 224.464L258.907 164.04H226.644L232.6 218.971Z" fill="#535461"></path>
+             <path id="Vector_11" opacity="0.05" d="M259.93 224.494C258.55 227.436 253.79 232.27 238.06 236.699C217.903 242.377 205.931 250.682 202.149 253.613C201.27 254.287 200.833 254.677 200.833 254.677C200.833 254.677 184.95 260.17 184.95 245.688C184.95 245.688 185.719 245.278 186.935 244.594C190.623 242.562 198.431 238.102 201.995 234.931C204.857 232.411 207.934 230.15 211.192 228.175L226.629 218.722L232.377 218.277L258.892 216.225L260.382 221.718C260.382 221.718 260.729 222.792 259.93 224.494Z" fill="black"></path>
+             <path id="Vector_12" d="M251.343 182.247C251.343 182.247 309.74 180.25 310.931 187.845C312.122 195.441 252.534 192.24 252.534 192.24C252.534 192.24 247.769 187.441 251.343 182.247Z" fill="#1E1F21"></path>
+             <path id="Vector_13" opacity="0.1" d="M204.07 212.619V219.576C200.635 220.025 197.12 220.31 193.74 220.419V212.619H204.07Z" fill="black"></path>
+             <path id="Vector_14" d="M203.295 205.134C201.846 205.021 200.404 204.826 198.977 204.549C193.378 203.471 179.261 201.208 175.464 205.049C170.699 209.843 172.288 218.237 184.999 219.436C197.711 220.634 219.561 217.438 223.934 212.639C223.934 212.619 216.027 206.117 203.295 205.134Z" fill="#1E1F21"></path>
+             <path id="Vector_15" d="M233.469 290.961L311.73 213.423L316.098 219.815L241.411 298.152L233.469 290.961Z" fill="#71575D"></path>
+             <path id="Vector_16" d="M346.689 303.75L341.129 306.946L302.344 197.918L300.607 193.039L309.745 187.84L312.033 195.021L346.689 303.75Z" fill="#71575D"></path>
+             <path id="Vector_17" d="M204.07 212.624H193.74V302.951H204.07V212.624Z" fill="#71575D"></path>
+             <path id="Vector_18" d="M201.29 237.403L309.745 203.431L313.318 211.825L202.084 250.192L201.29 237.403Z" fill="#1E1F21"></path>
+             <path id="Vector_19" opacity="0.1" d="M178.363 270.347L167.761 280.11C165.883 277.685 163.761 275.462 161.427 273.478L171.325 263.076C173.873 265.293 176.228 267.726 178.363 270.347V270.347Z" fill="black"></path>
+             <path id="Vector_20" d="M252.931 203.431L307.357 184.644C307.357 184.644 316.892 185.843 313.313 193.838L258.495 210.222C258.495 210.222 250.157 211.021 252.931 203.431Z" fill="#1E1F21"></path>
+             <path id="Vector_21" opacity="0.1" d="M231.479 313.743C238.499 313.743 244.19 308.017 244.19 300.954C244.19 293.891 238.499 288.165 231.479 288.165C224.458 288.165 218.767 293.891 218.767 300.954C218.767 308.017 224.458 313.743 231.479 313.743Z" fill="black"></path>
+             <path id="Vector_22" opacity="0.1" d="M333.411 264.594C330.931 265.239 328.513 266.103 326.184 267.176L321.439 253.838C323.929 252.746 326.494 251.833 329.113 251.106L333.411 264.594Z" fill="black"></path>
+             <path id="Vector_23" opacity="0.1" d="M191.556 307.546C191.556 310.609 191.32 313.667 190.851 316.694C186.086 316.35 181.162 315.85 176.338 315.351C177.41 309.413 177.276 303.318 175.946 297.433C180.646 296.434 185.446 295.481 190.132 294.617C191.081 298.86 191.559 303.196 191.556 307.546V307.546Z" fill="black"></path>
+             <path id="Vector_24" d="M228.884 299.993L228.88 299.996C227.387 301.119 227.082 303.247 228.198 304.749L238.287 318.322C239.403 319.824 241.519 320.131 243.011 319.008L243.015 319.005C244.508 317.882 244.813 315.754 243.697 314.252L233.608 300.679C232.492 299.177 230.376 298.87 228.884 299.993Z" fill="#7F879C"></path>
+             <path id="Vector_25" d="M289.682 123.341L288.5 138.377C288.364 140.282 288.389 142.194 288.575 144.095C288.729 145.778 288.575 148.724 286.937 153.218C284.834 158.96 283.747 165.027 283.725 171.146V188.26L272.309 186.262C272.309 186.262 272.805 162.292 270.82 158.297C268.835 154.302 272.309 118.846 272.309 118.846L289.682 123.341Z" fill="#DB8B8B"></path>
+             <path id="Vector_26" d="M233.107 238.197L228.813 262.767C228.272 266.047 227.441 269.272 226.331 272.404C223.815 279.326 225.423 289.029 226.644 294.322C227.185 296.659 227.637 298.137 227.637 298.137L214.731 305.129L210.76 302.132V300.135L210.264 255.69C207.286 248.699 208.279 238.212 210.264 234.217C210.829 232.905 211.226 231.525 211.445 230.112C212.438 224.759 212.746 217.238 212.746 217.238C212.746 217.238 220.688 203.755 230.118 212.744C233.593 216.055 234.913 220.384 235.191 224.529C235.678 231.625 233.107 238.197 233.107 238.197Z" fill="#DB8B8B"></path>
+             <path id="Vector_27" d="M134.549 302.951L196.917 237.403L198.907 252.589L137.726 308.944L134.549 302.951Z" fill="#71575D"></path>
+             <path id="Vector_28" opacity="0.1" d="M235.191 224.514C228.307 228.629 216.33 229.793 211.445 230.097C212.438 224.744 212.746 217.223 212.746 217.223C212.746 217.223 220.688 203.74 230.118 212.729C233.593 216.04 234.913 220.37 235.191 224.514Z" fill="black"></path>
+             <path id="Vector_29" opacity="0.05" d="M289.096 130.792L288.5 138.377C288.366 140.28 288.393 142.191 288.58 144.09C288.734 145.773 288.58 148.719 286.942 153.218C284.839 158.96 283.752 165.027 283.73 171.146V188.26L272.314 186.262C272.314 186.262 272.81 162.292 270.825 158.297C269.42 155.466 270.75 136.854 271.649 126.232C272.021 121.863 272.314 118.846 272.314 118.846L289.687 123.341L289.096 130.792Z" fill="black"></path>
+             <path id="Vector_30" opacity="0.1" d="M254.177 156.499C253.944 158.831 253.944 160.295 253.944 160.295C253.944 160.295 242.527 169.783 223.169 155.301C203.811 140.819 186.439 144.814 186.439 144.814C186.439 144.814 186.642 143.655 187.054 141.818C188.424 138.996 189.913 137.823 189.913 137.823L251.958 149.808L254.177 156.499Z" fill="black"></path>
+             <path id="Vector_31" opacity="0.05" d="M256.058 145.029C254.779 149.51 254.069 154.136 253.944 158.796C253.944 158.796 250.926 161.293 245.367 161.793C245.21 161.475 245.09 161.14 245.009 160.794C244.017 156.3 236.571 148.31 236.571 148.31C231.608 143.815 230.615 135.825 230.615 135.825L222.425 111.605L219.695 109.358C219.695 109.358 231.111 100.37 241.038 107.86C250.966 115.351 247.987 131.331 247.987 131.331L249.973 136.824C252.033 138.572 254.127 141.653 256.058 145.029Z" fill="black"></path>
+             <path id="Vector_32" opacity="0.1" d="M312.033 195.021L302.344 197.918L300.607 193.039L309.745 187.84L312.033 195.021Z" fill="black"></path>
+             <path id="Vector_33" d="M296.373 103.84C295.077 114.003 294.645 126.811 294.645 126.811C283.229 135.8 274.295 124.315 274.295 124.315C263.514 127.226 258.446 136.719 256.058 145.004C254.779 149.485 254.069 154.111 253.944 158.772C253.944 158.772 250.926 161.268 245.367 161.768C240.11 162.212 232.575 160.834 223.169 153.778C203.811 139.296 186.439 143.291 186.439 143.291C186.439 143.291 189.913 123.316 197.855 117.323C205.797 111.331 211.753 103.84 221.68 80.8689C231.608 57.8976 251.958 63.3908 251.958 63.3908C251.958 63.3908 252.951 58.8964 271.316 63.3908C275.79 64.5703 279.93 66.777 283.413 69.8377C293.236 78.1473 298.001 91.0362 296.373 103.84Z" fill="black"></path>
+             <path id="Vector_34" d="M251.958 212.23C246.68 215.058 241.692 218.403 237.068 222.217C229.126 228.709 209.271 229.208 209.271 229.208V221.718C209.768 212.729 201.33 202.742 189.913 174.777C182.622 156.919 184.642 146.811 187.054 141.818C188.424 138.996 189.913 137.823 189.913 137.823L251.958 149.808L254.177 156.499L258.907 170.782C258.907 170.782 241.535 171.78 238.557 173.278C235.578 174.777 237.564 188.26 237.564 188.26C234.586 202.242 251.958 212.23 251.958 212.23Z" fill="#6A6567"></path>
+             <path id="Vector_35" d="M232.278 313.743C239.298 313.743 244.989 308.017 244.989 300.954C244.989 293.891 239.298 288.165 232.278 288.165C225.257 288.165 219.566 293.891 219.566 300.954C219.566 308.017 225.257 313.743 232.278 313.743Z" fill="#1E1F21"></path>
+             <path id="Vector_36" d="M277.953 74.6517C277.928 75.3159 277.873 76.0549 277.784 76.8789C276.791 85.8677 275.798 84.8689 264.879 86.8664C258.088 88.1099 254.559 82.402 252.862 77.9076C252.247 76.2795 251.784 74.5978 251.477 72.8839L275.302 68.8889C275.302 68.8889 278.156 68.0849 277.953 74.6517Z" fill="#DB8B8B"></path>
+             <path id="Vector_37" d="M281.244 63.4157C281.244 68.0512 279.413 72.4969 276.155 75.7747C272.897 79.0524 268.478 80.8939 263.871 80.8939C259.263 80.8939 254.845 79.0524 251.587 75.7747C248.329 72.4969 246.498 68.0512 246.498 63.4157C246.498 63.1261 246.498 62.8365 246.498 62.5468C246.613 57.9113 248.553 53.5115 251.892 50.3152C255.231 47.1188 259.695 45.3879 264.303 45.5031C268.91 45.6184 273.284 47.5703 276.461 50.9296C279.638 54.2888 281.358 58.7802 281.244 63.4157V63.4157Z" fill="#DB8B8B"></path>
+             <path id="Vector_38" opacity="0.1" d="M289.682 123.341L289.096 130.792C280.459 133.288 274.295 125.338 274.295 125.338C273.394 125.581 272.508 125.88 271.644 126.232C272.016 121.863 272.309 118.846 272.309 118.846L289.682 123.341Z" fill="black"></path>
+             <path id="Vector_39" opacity="0.1" d="M242.527 87.8851L249.477 115.351C249.477 115.351 228.133 118.846 223.666 115.351C219.199 111.855 210.76 110.856 210.76 110.856C210.76 110.856 219.695 84.8889 224.659 81.8926C229.622 78.8964 242.527 87.8851 242.527 87.8851Z" fill="black"></path>
+             <path id="Vector_40" opacity="0.1" d="M227.637 298.122L214.731 305.114L210.76 302.117V300.12C215.22 299.801 219.552 298.486 223.442 296.27C224.634 295.59 225.755 294.921 226.654 294.332C227.175 296.644 227.637 298.122 227.637 298.122Z" fill="black"></path>
+             <path id="Vector_41" opacity="0.05" d="M200.089 117.099C200.089 117.099 212.994 120.594 216.965 129.583C220.936 138.572 231.677 140.215 231.677 140.215" fill="black"></path>
+             <path id="Vector_42" d="M221.184 108.859L232.104 135.326C232.104 135.326 233.097 143.316 238.06 147.81C238.06 147.81 245.506 155.8 246.498 160.295C247.491 164.789 261.389 176.774 261.389 176.774C261.389 176.774 274.295 188.759 275.287 193.253C275.287 193.253 287.2 196.749 285.711 203.74C285.711 203.74 294.645 194.752 285.711 186.262C276.776 177.773 264.864 160.295 264.864 160.295C264.864 160.295 257.915 141.818 251.462 136.325L249.477 130.831C249.477 130.831 252.455 114.851 242.527 107.361C232.6 99.8702 221.184 108.859 221.184 108.859Z" fill="#DB8B8B"></path>
+             <path id="Vector_43" d="M248.732 314.851H218.95V324.34H248.732V314.851Z" fill="#1E1F21"></path>
+             <path id="Vector_44" d="M242.527 86.8864L249.477 114.352C249.477 114.352 228.133 117.848 223.666 114.352C219.199 110.856 210.76 109.858 210.76 109.858C210.76 109.858 219.695 83.8901 224.659 80.8939C229.622 77.8976 242.527 86.8864 242.527 86.8864Z" fill="black"></path>
+             <path id="Vector_45" d="M223.423 297.243C226.088 295.745 228.426 294.247 228.629 293.628C228.629 293.628 235.355 300.769 241.346 302.986C243.361 303.735 245.289 304.699 247.099 305.863C249.472 307.361 252.857 309.124 255.929 309.124C255.929 309.124 262.878 315.116 249.477 316.115C236.075 317.114 204.804 313.618 204.804 313.618L206.79 301.134C212.591 301.476 218.366 300.125 223.423 297.243Z" fill="#E5E5E5"></path>
+             <path id="Vector_46" d="M137.329 307.361C137.329 307.361 220.757 285.388 227.508 293.773C234.258 302.157 241.411 313.353 220.375 317.348C199.339 321.343 135.755 310.552 135.755 310.552L137.329 307.361Z" fill="#71575D"></path>
+             <path id="Vector_47" opacity="0.1" d="M248.732 314.851H218.95V324.34H248.732V314.851Z" fill="#1E1F21"></path>
+           </g>
+           <g id="left-wheel">
+             <path id="Vector_48" d="M135.686 358.047L132.574 309.139L132.509 309.034L129.372 310.132L114.938 352.504L91.9815 336.13L128.548 309.458L128.583 309.353L128.792 309.278L131.149 307.556L92.8104 285.928L83.4193 296.315L84.9084 306.052L128.995 306.861V307.86L84.0844 307.051L82.3868 295.995L95.2426 281.783L114.477 259.211L114.819 260.145L118.889 255.65L134.008 258.377V257.773L135.001 257.803V258.557L157.516 262.612L136.525 304.864L133.462 307.096V307.346V307.625L182.006 290.607L176.244 336.155L135.046 309.753L133.596 308.934L157.888 348.325L135.686 358.047ZM133.701 310.936L136.604 356.569L156.483 347.89L133.701 310.936ZM93.7039 336.12L114.447 350.916L128.017 311.096L93.7039 336.12ZM134.564 308.325L135.602 308.909L175.484 334.477L180.845 292.095L134.564 308.325ZM131.04 304.729L132.286 306.752L132.504 306.592L133.993 259.386L119.232 256.729L115.181 261.223L131.04 304.729ZM93.6046 285.223L130.752 306.197L130.107 305.134L114.432 262.052L95.9722 282.462L93.6046 285.223ZM135.001 259.561L133.512 305.863L135.755 304.225L156.062 263.366L135.001 259.561Z" fill="#535461"></path>
+             <path id="Vector_49" d="M132.956 313.743C136.468 313.743 139.314 310.879 139.314 307.346C139.314 303.813 136.468 300.949 132.956 300.949C129.444 300.949 126.598 303.813 126.598 307.346C126.598 310.879 129.444 313.743 132.956 313.743Z" fill="#1E1F21"></path>
+             <path id="Vector_50" d="M190.132 294.607C188.141 285.708 184.111 277.401 178.363 270.347C176.229 267.726 173.876 265.293 171.33 263.076C161.538 254.571 149.217 249.578 136.3 248.88C123.383 248.181 110.601 251.818 99.9599 259.218C89.3191 266.619 81.4219 277.365 77.5077 289.769C73.5935 302.173 73.8838 315.534 78.3331 327.754C82.7824 339.975 91.1389 350.363 102.091 357.288C113.043 364.214 125.971 367.285 138.845 366.02C151.72 364.754 163.812 359.224 173.225 350.296C182.637 341.369 188.837 329.55 190.851 316.694C191.32 313.667 191.556 310.609 191.556 307.546C191.56 303.193 191.082 298.853 190.132 294.607ZM132.956 351.71C123.906 351.701 115.079 348.887 107.675 343.653C100.27 338.418 94.648 331.016 91.5724 322.453C88.4968 313.89 88.1171 304.582 90.4849 295.795C92.8527 287.007 97.8531 279.167 104.806 273.339C111.759 267.512 120.328 263.98 129.346 263.224C138.365 262.468 147.396 264.526 155.211 269.116C163.027 273.706 169.247 280.606 173.027 288.879C176.807 297.151 177.963 306.394 176.338 315.351C174.476 325.56 169.116 334.789 161.19 341.432C153.263 348.075 143.273 351.713 132.956 351.71Z" fill="#1E1F21"></path>
+           </g>
+           <g id="right-wheel">
+             <path id="Vector_51" d="M347.23 358.247L344.122 309.358L344.058 309.253L340.921 310.352L326.482 352.704L303.525 336.325L340.102 309.653L340.137 309.548L340.345 309.473L342.703 307.75L304.364 286.122L294.968 296.509L296.457 306.247L340.534 307.036V308.035L295.623 307.226L293.935 296.185L306.786 281.978L326.005 259.421L326.348 260.355L330.418 255.86L345.577 258.592V257.988L346.569 258.017V258.772L369.084 262.826L348.073 305.099L345.011 307.331V307.581V307.86L393.56 290.841L387.797 336.389L346.599 309.987L345.15 309.169L369.442 348.564L347.23 358.247ZM345.244 311.136L348.148 356.769L368.027 348.09L345.244 311.136ZM305.252 336.325L325.995 351.121L339.566 311.301L305.252 336.325ZM346.113 308.529L347.15 309.114L387.033 334.682L392.393 292.3L346.113 308.529ZM342.589 304.934L343.835 306.956L344.053 306.796L345.542 259.591L330.78 256.924L326.73 261.418L342.589 304.934ZM305.168 285.433L342.316 306.407L341.67 305.343L325.995 262.262L307.531 282.677L305.168 285.433ZM346.55 259.77L345.061 306.057L347.304 304.419L367.61 263.561L346.55 259.77Z" fill="#535461"></path>
+             <path id="Vector_52" d="M344.505 313.943C348.016 313.943 350.863 311.079 350.863 307.546C350.863 304.013 348.016 301.149 344.505 301.149C340.993 301.149 338.146 304.013 338.146 307.546C338.146 311.079 340.993 313.943 344.505 313.943Z" fill="#1E1F21"></path>
+             <path id="Vector_53" d="M344.703 248.994C339.435 248.988 334.191 249.7 329.113 251.111C326.494 251.838 323.929 252.751 321.439 253.843C308.171 259.629 297.508 270.161 291.512 283.4C285.516 296.639 284.614 311.645 288.979 325.515C293.345 339.385 302.668 351.133 315.146 358.486C327.624 365.84 342.369 368.276 356.529 365.324C370.689 362.372 383.257 354.242 391.803 342.505C400.349 330.769 404.265 316.261 402.793 301.788C401.321 287.315 394.566 273.905 383.835 264.153C373.104 254.401 359.159 249 344.698 248.994H344.703ZM344.505 351.91C334.438 351.906 324.676 348.438 316.839 342.081C309.002 335.724 303.562 326.862 301.423 316.965C299.284 307.069 300.574 296.734 305.079 287.677C309.584 278.62 317.033 271.386 326.189 267.176C328.518 266.103 330.936 265.24 333.416 264.594C339.478 263.011 345.805 262.745 351.977 263.814C358.148 264.883 364.023 267.262 369.21 270.792C374.397 274.323 378.777 278.925 382.058 284.291C385.34 289.657 387.448 295.665 388.242 301.915C389.036 308.165 388.498 314.513 386.664 320.537C384.829 326.561 381.741 332.123 377.603 336.853C373.466 341.583 368.375 345.372 362.669 347.968C356.962 350.564 350.772 351.908 344.51 351.91H344.505Z" fill="#1E1F21"></path>
+           </g>
+           <path id="hat" d="M233.931 52.6043C234.988 55.9401 240.066 56.045 242.671 58.5019C244.026 59.7803 244.657 61.6679 246.146 62.8065C248.216 64.3945 251.204 64.045 253.839 63.6654C259.146 62.9064 264.844 62.4519 269.629 64.7541C271.326 65.568 272.85 66.7066 274.622 67.3708C276.394 68.035 278.593 68.1149 280.032 66.9363C281.184 65.9925 281.606 64.4395 282.648 63.4008C283.457 62.5818 284.584 62.1224 285.507 61.4033C287.532 59.8652 288.406 57.3583 288.982 54.9613C290.173 50.0275 290.516 44.7091 288.485 40.03C286.455 35.3508 281.571 31.5406 276.24 31.7853C274.607 31.8602 273.014 32.2846 271.386 32.4644C267.142 32.8989 262.948 31.4657 258.689 31.221C257.454 31.0697 256.2 31.2417 255.051 31.7204C254.184 32.2052 253.436 32.8792 252.862 33.6929C250.912 36.2624 249.577 39.2494 248.96 42.422C248.464 44.814 248.439 46.9813 245.525 47.3508C242.215 47.7903 231.692 45.5481 233.931 52.6043Z" fill="#472727"></path>
+         </g>
+         <defs>
+           <linearGradient id="paint0_linear" x1="432.641" y1="56.6686" x2="44.1018" y2="338.225" gradientUnits="userSpaceOnUse">
+             <stop offset="0.0001" stop-color="#490DF3"></stop>
+             <stop offset="1" stop-color="#3B49C6" stop-opacity="0.05"></stop>
+           </linearGradient>
+         </defs>
+       </svg>
+     </div>
+      </ul>
     </div>
-     </ul>
-   </div>
-   </nav>
-   
-    <!-- loader -->
-    <div class="loader-container disappear" style="display: none;">
-        <div class="atom">
-            <div class="electron"></div>
-            <div class="electron-alpha"></div>
-            <div class="electron-omega"></div>
-		</div>
-   </div>
-add 
-
-    <div class="container pt-5" style="width: 100%; min-height: 80%">
-        <section style="height: 70vh">
-            <div class="px-3 pt-5">
-                <div class="row">
-
-                    <div class="col-md-6 godown">
-                        <svg xmlns="http://www.w3.org/2000/svg" id="ku" width="90%" baseProfile="tiny" class="svgmate" version="1" viewBox="300 150 550 570">
-
-                <g id="wall">
-                  <path fill="#bb86fc" d="M674 333c0 2-2 4-4 4H553c-2 0-4-2-4-4V203c0-2 2-4 4-4h117c2 0 4 2 4 4v130z">
-                  </path>
-                  <path id="Layer_33" fill="#7348a7" d="M639 240c-4-4-10-4-13 0l-77 77v15l5 5h116c2 0 4-2 4-4v-58l-35-35z"></path>
-                </g>
-                <g id="light">
-                  <circle id="bulb" cx="550" cy="230" r="9" fill="#c2c0c5"></circle>
-                  <path fill="#52057B" d="M550 201l-27 29h55z"></path>
-                </g>
-                <g id="Woman__x2F__Chair__x2F__Screen">
-                  <g id="backleg_1_">
-                    <path id="backlegpath" fill="#39065A" d="M651 521l47-90 24-16 12 11-29 44-46 56z"></path>
-                    <path fill="#BCBCBD" d="M639 549l20-23-8-5s-8 6-14 6-26-7-26-7v10l28 19z"></path>
-                  </g>
-                  <g id="Chair_1_">
-                    <g id="legs_1_">
-                      <path fill="#34363E" d="M782 461l-65 36v-5l68-38v5z"></path>
-                      <path fill="#34363E" d="M726 459l65 36v-4l-65-37z"></path>
-                      <path fill="#52057B" d="M779 441l19 108 5 1-10-112zM729 440l-10 3-9 107h4l18-108z"></path>
-                    </g>
-                    <g id="seat_1_">
-                      <path fill="#bb86fc"
-                        d="M804 360c15 0 18-2 19 20s-13 42-17 48-6 15-24 15h-70l-2-9s73 0 80-8 16-22 18-36 6-21 2-23-6-7-6-7z">
-                      </path>
-                      <path fill="#52057B"
-                        d="M796 359h8c7-1 13 2 12 17s-9 34-13 42-9 17-32 17h-64s16-8 35-8 22-11 26-21 11-28 13-37 6-10 15-10z">
-                      </path>
-                      <path id="womanshdow" fill="#413C69"
-                        d="M803 407c0-10-13-23-15-31s4-14 9-17h-4c-8 0-11 2-12 10l-5 17v3c3 8 6 16 6 24s-15 17-15 17l-5 5h9c22 0 27-9 31-17l1-11z">
-                      </path>
-                    </g>
-                  </g>
-                  <g id="back-arm">
-                    <path fill="#F68E5A" d="M737 386l48-55s-4-25-17-7-35 54-35 54l4 8z"></path>z
-                    <path id="lowervackarm" fill="#F68E5A" d="M669 361c4 1 13 4 15 2s8-4 11-2l42 25v-15s-46-22-51-19l-17 9z"></path>
-                  </g>
-                  <g id="womanscreen" class="womscreenmove">
-                  </g>
-                  <g id="Woman">
-                    <g id="Front_leg">
-                      <path id="leg" fill="#413C69" d="M737 435h-20s-2 1-1 2l26 78-11 1-42-74c-1-2-5-13 1-16l29-13 18 22z"></path>
-                      <path fill="#BCBCBD" d="M750 537c-1 1-17 13-23 13s-13 0-14-2c0-5 4-2 7-4s11-8 12-15l-2-15 11-2 7 21 2 4z">
-                      </path>
-                    </g>
-                    <g id="hairback">
-                      <path id="shaded" fill="#585268" d="M809 308c11 4 11 23 2 32s-31-14-35-29-3-27 4-20c13 13 21 13 29 17z"></path>
-                      <path id="main" fill="#585268"
-                        d="M784 364c6-3 32-21 30-34s-18-16-26-29-21 2-13 11 11 33 7 36c-16 17 2 16 2 16z"></path>
-                    </g>
-                    <g id="dress">
-                      <path fill="#c4c1f7"
-                        d="M755 315c-4 5-29 31-18 39s19 13 16 31-33 28-42 31l20 19h28c11 0 29-7 29-24s-7-19-7-27l5-21c1-4 3-32-2-39-8-10-17-19-29-9z">
-                      </path>
-
-                    </g>
-                    <g id="womanhead">
-                      <g id="headbase">
-                        <path fill="#F89F71" d="M768 321c-3 2-9 8-11-1s-4-8-6-7-18-22-15-30 31-34 34-7-2 24 3 29 2 5 0 8l-5 8z">
-                        </path>
-                        <path fill="#F89F71" d="M733 281c-6 9 9 32 15 32 4 0 6-3 5-4-4-1-15-23-15-28 1-6-5 0-5 0z">
-                        </path>
-                        <path fill="#F89F71" d="M767 321c1-1 2-1 1-2l-3-5c-1-6-9-7-12-3l-1 1c2 0 4 1 5 8 2 8 7 4 10 1z"></path>
-                      </g>
-                      <g id="hairbase">
-                        <path id="tophairmain" fill="#585268"
-                          d="M764 285c-7-7-13-2-28-2-8 0-23-12-13-15 8-3 5-12 16-17s22-4 32 7 13 33 14 38 5 8 9 13c0 0-4 14-9 12s-7 2-13-4-4-5-5-8 1-16-1-20l-2-4z">
-                        </path>
-                        <path id="botshadehar" fill="#585268" d="M767 297c-2 10-7 34 11 26 20-8-9 3-11-26z"></path>
-                        <path fill="#585268" d="M725 266c-7 4-13 5-12 9s9 8 25 8c-8-2-18-9-13-17z"></path>
-                      </g>
-                      <g id="glasses_1_">
-                        <g id="glassshadow" fill="#F89F71">
-                          <path d="M760 281l-16 8 2 3 2 4 3-8c0-2 10-6 10-6l-1-1zM737 297c-1-3-3-3-3-3l5-3-2 6z">
-                          </path>
+    </nav>
+        <!-- loader -->
+        <div class="loader-container disappear" style="display: none;">
+            <div class="atom">
+                <div class="electron"></div>
+                <div class="electron-alpha"></div>
+                <div class="electron-omega"></div>
+            </div>
+        </div>
+    
+        <!--Dynamic Nav Bar-->
+    
+        <!--Header Section-->
+        <div class="container pt-5" style="width: 100%; min-height: 80%;">
+            <section style="height: 90vh;">
+                <div class="container-fluid px-3 pt-5">
+                    <div class="row mx-auto">
+                        <div class="godown col-md-6">
+                            <div class="img-fluid d-block  animate__animated animate__zoomIn animate__delay-1s">
+                                <svg width="90%" viewBox="0 0 1006 830" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="undraw_Tree_swing_646s 1" clip-path="url(#clip0)">
+                        <path id="Vector" d="M462.918 28.5253C463.527 29.9749 463.981 31.4902 464.271 33.0436C463.612 30.674 463.095 29.0655 462.918 28.5253Z" fill="#3f3d56"></path>
+                        <path id="Vector_2" d="M483.784 103.593C483.784 103.593 483.784 105.287 482.031 111.402L483.784 103.593Z" fill="#3f3d56"></path>
+                        <path id="Vector_3" d="M698.541 362.355C652.282 387.525 591.768 409.257 573.643 415.556C587.463 411.799 627.689 406.74 690.014 447.332C768.324 498.322 852.055 464.324 852.055 464.324C852.055 464.324 833.448 501.564 793.905 503.982C754.362 506.413 651.247 438.43 616.362 457.854C581.465 477.278 565.187 452.992 551.225 501.563C537.276 550.123 511.694 682.848 541.157 757.314L570.609 831.768H403.145C403.145 831.768 463.624 663.424 430.279 559.835C411.614 501.821 385.408 459.806 375.634 438.455C370.73 427.76 369.954 422.26 376.305 422.53C379.916 422.69 385.832 424.715 394.618 428.718C394.618 428.718 354.299 387.439 341.126 387.439C327.941 387.439 265.909 380.969 245.761 359.114C245.761 359.114 217.075 338.07 165.899 389.87C114.724 441.671 127.133 441.671 81.3912 437.62C36.3672 433.629 1.09378 410.829 -6.10352e-05 410.117C1.30549 410.669 53.8922 432.61 86.037 421.437C118.605 410.105 146.516 367.205 175.203 352.644C203.89 338.07 220.944 318.646 259.711 339.69L234.164 276.815L227.166 259.589L227.154 259.564C227.154 259.564 218.615 141.401 202.337 133.309C186.059 125.206 196.139 104.174 165.899 100.122C165.899 100.122 203.113 95.2598 210.088 121.977C217.075 148.681 265.145 292.751 265.145 292.751C265.145 292.751 294.596 354.252 327.164 339.69C359.733 325.116 314.756 243.382 314.756 243.382L258.935 216.665C258.935 216.665 300.806 215.044 326.388 240.14C351.97 265.224 353.522 346.161 353.522 346.161C353.522 346.161 417.871 355.873 433.385 392.302C433.385 392.302 443.464 359.924 424.081 340.501C419.235 335.639 414.143 327.191 409.238 317.258C390.646 279.134 383.927 235.899 390.019 193.594C392.901 172.894 394.677 152.647 391.513 147.871C384.538 137.349 355.075 72.6069 352.746 55.6018C350.429 38.6091 355.075 3.00287 355.075 3.00287C355.075 3.00287 355.851 46.7003 365.155 60.4639C374.458 74.2276 400.816 142.211 400.816 142.211C400.816 142.211 400.816 227.997 422.529 270.086C444.241 312.175 486.101 359.114 483.784 389.87V407.674C483.784 407.674 530.301 361.545 527.196 346.161C524.091 330.789 520.221 294.36 490.758 272.517C461.295 250.662 441.912 215.854 462.848 165.674C474.621 137.447 479.773 122.284 482.031 114.413L469.822 168.916C469.822 168.916 462.071 224.756 483.784 244.18C483.842 244.229 483.889 244.278 483.948 244.327C505.625 263.775 534.171 299.222 534.171 299.222L534.089 297.663L527.972 182.679L529.313 185.749L538.981 207.874L548.132 228.808C548.132 228.808 591.545 170.536 642.72 151.112C693.883 131.689 725.675 63.7053 725.675 63.7053L769.1 28.0868L733.426 72.6069C733.426 72.6069 722.57 125.206 661.327 162.445C600.072 199.672 560.541 254.702 558.212 288.7C555.883 322.698 553.554 352.644 553.554 352.644C553.554 352.644 668.302 348.592 693.883 295.981C719.477 243.382 740.413 240.951 740.413 240.951L725.675 286.269L709.397 325.116C709.397 325.116 776.075 326.737 810.96 368.016C845.857 409.294 932.682 421.437 932.682 421.437L883.847 435.189C883.847 435.189 837.318 419.006 793.129 389.06C748.94 359.114 753.586 332.409 698.541 362.355Z" fill="#3f3d56"></path>
+                        <path id="Vector_4" opacity="0.1" d="M723.264 248.928C718.36 271.593 712.585 293.485 704.469 310.17C678.887 362.782 564.14 366.833 564.14 366.833C564.14 366.833 564.681 359.884 565.504 348.92C594.638 346.415 674.277 335.721 695.06 292.981C696.965 289.077 698.729 284.878 700.4 280.458L723.264 248.928Z" fill="black"></path>
+                        <path id="Vector_5" opacity="0.1" d="M544.757 313.412C544.757 313.412 516.07 277.793 494.369 258.369C489.606 254.121 486.266 248.105 483.948 241.328C483.76 240.787 483.584 240.235 483.407 239.682C483.913 240.198 484.419 240.701 484.96 241.18C503.955 258.185 528.314 287.603 534.089 294.663C534.9 295.67 535.347 296.223 535.347 296.223L529.313 182.749L538.982 204.874L544.757 313.412Z" fill="black"></path>
+                        <path id="Vector_6" opacity="0.1" d="M561.362 211.219C561.193 231.146 558.716 242.997 558.716 242.997C558.716 242.997 602.115 184.749 653.272 165.312C656.295 163.316 659.363 161.35 662.502 159.442C723.752 122.212 734.607 69.6039 734.607 69.6039L770.271 25.0898L726.854 60.7011C726.854 60.7011 695.066 128.686 643.895 148.111C609.014 161.351 577.742 192.637 561.362 211.219Z" fill="black"></path>
+                        <path id="Vector_7" opacity="0.1" d="M494.364 404.058V421.863C494.364 421.863 540.883 375.73 537.782 360.353C535.41 348.593 532.571 324.529 518.195 304.083C524.675 319.535 526.647 334.607 528.372 343.164C530.596 354.191 507.306 381.031 493.949 395.336C494.417 398.216 494.557 401.144 494.364 404.058V404.058Z" fill="black"></path>
+                        <path id="Vector_8" opacity="0.1" d="M431.963 281.866C432.332 282.686 432.712 283.493 433.114 284.274C445.003 307.323 462.928 331.824 476.339 354.33C465.5 332.042 446.637 306.556 431.963 281.866Z" fill="black"></path>
+                        <path id="Vector_9" opacity="0.1" d="M691.189 444.332C665.684 427.725 643.884 418.763 626.076 414.223C607.396 421.562 592.021 427.035 584.285 429.722C598.16 425.973 638.356 420.993 700.598 461.521C749.434 493.32 800.377 492.066 831.807 486.619C840.5 479.773 847.785 471.172 853.23 461.328C853.23 461.328 769.496 495.321 691.189 444.332Z" fill="black"></path>
+                        <path id="Vector_10" opacity="0.1" d="M469.762 247.409C463.51 231.418 462.479 212.389 469.662 190.091C469.572 182.01 470.019 173.933 470.999 165.916L483.207 111.401C480.957 119.262 475.807 134.429 464.021 162.679C449.102 198.443 454.67 226.389 469.762 247.409Z" fill="black"></path>
+                        <path id="Vector_11" opacity="0.1" d="M812.138 365.016C787.943 336.39 748.465 326.841 726.534 323.674L719.981 339.31C719.981 339.31 786.659 340.928 821.548 382.205C840.895 405.095 876.213 419.021 903.843 426.889L933.863 418.433C933.863 418.433 847.028 406.293 812.138 365.016Z" fill="black"></path>
+                        <path id="Vector_12" opacity="0.1" d="M337.75 353.878C370.314 339.31 325.345 257.566 325.345 257.566L324.115 256.977C335.326 281.669 351.585 326.29 328.341 336.689C306.591 346.42 286.227 322.21 275.099 305.058C275.503 306.271 275.725 306.936 275.725 306.936C275.725 306.936 305.187 368.446 337.75 353.878Z" fill="black"></path>
+                        <path id="Vector_13" opacity="0.1" d="M443.969 406.486C443.969 406.486 453.781 374.913 435.348 355.42C439.868 372.213 434.559 389.296 434.559 389.296C422.564 361.122 381.346 348.934 363.292 344.857C363.993 354.237 364.111 360.353 364.111 360.353C364.111 360.353 428.462 370.065 443.969 406.486Z" fill="black"></path>
+                        <path id="Vector_14" opacity="0.1" d="M483.207 111.401C484.955 105.298 484.955 103.597 484.955 103.597L483.207 111.401Z" fill="black"></path>
+                        <path id="Vector_15" opacity="0.1" d="M96.1564 435.777C96.3128 435.724 96.4716 435.676 96.6269 435.622C129.19 424.291 157.102 381.396 185.788 366.828C214.475 352.259 231.532 332.835 270.298 353.878C270.298 353.878 263.516 324.899 250.373 305.86C254.726 315.799 258.245 326.114 260.888 336.689C222.123 315.646 205.066 335.07 176.379 349.638C147.692 364.207 119.781 407.102 87.2175 418.433C54.6542 429.764 1.15741 407.102 1.15741 407.102C1.15741 407.102 36.8219 430.573 82.5656 434.62C87.7984 435.083 92.2634 435.491 96.1564 435.777Z" fill="black"></path>
+                        <path id="Vector_16" opacity="0.1" d="M237.74 273.754C237.74 273.754 236.47 273.778 234.164 273.815L227.166 256.589C227.931 256.577 228.331 256.565 228.331 256.565C228.331 256.565 222.944 182.037 212.57 147.303C212.699 147.364 212.805 147.438 212.923 147.499C229.201 155.59 237.74 273.754 237.74 273.754Z" fill="black"></path>
+                        <path id="Vector_17" opacity="0.1" d="M419.395 828.772C433.601 783.312 467.765 657.603 440.868 574.021C429.252 537.925 418.485 514.907 409.383 500.223C416.189 514.124 423.631 532.511 431.458 556.831C464.797 660.428 404.322 828.772 404.322 828.772H419.395Z" fill="black"></path>
+                        <path id="Vector_18" opacity="0.1" d="M405.203 442.908C395.848 438.614 385.836 436.09 375.634 435.455C370.73 424.761 369.954 419.26 376.305 419.531C378.069 419.862 379.845 420.255 381.609 420.709C394.077 431.514 405.203 442.908 405.203 442.908Z" fill="black"></path>
+                        <path id="Vector_19" opacity="0.1" d="M195.31 122.448C196.194 124.003 197.266 125.433 198.498 126.703C197.593 125.163 196.523 123.736 195.31 122.448V122.448Z" fill="black"></path>
+                        <path id="Vector_20" opacity="0.1" d="M336.975 254.328C338.173 255.511 339.296 256.775 340.336 258.111C336.94 249.588 332.746 242.219 327.566 237.139C301.98 212.049 260.113 213.668 260.113 213.668L312.619 238.789C321.616 242.293 329.884 247.568 336.975 254.328Z" fill="black"></path>
+                        <path id="Vector_21" opacity="0.1" d="M392.692 144.873C395.856 149.644 394.079 169.891 391.19 190.598C385.1 232.901 391.822 276.134 410.415 314.255C412.885 319.356 415.644 324.299 418.677 329.059C400.957 291.501 394.65 249.189 400.599 207.787C403.488 187.08 405.266 166.833 402.102 162.063C395.124 151.541 365.662 86.7931 363.336 69.7968C362.638 63.203 362.476 56.5596 362.85 49.9372C356.827 32.0991 356.252 0 356.252 0C356.252 0 351.6 35.6114 353.926 52.6076C356.252 69.6037 385.714 134.352 392.692 144.873Z" fill="black"></path>
+                        <path id="Vector_22" opacity="0.1" d="M465.429 32.9839C465.118 31.3843 464.646 29.8234 464.021 28.3272C464.021 28.3272 464.617 30.074 465.429 32.9839Z" fill="black"></path>
+                        <path id="Vector_23" opacity="0.1" d="M191.584 114.496C198.417 115.369 206.277 117.558 212.272 122.633C211.881 121.252 211.54 120.014 211.268 118.974C204.29 92.2658 167.075 97.1219 167.075 97.1219C183.893 99.3726 188.237 106.882 191.584 114.496Z" fill="black"></path>
+                        <g id="Leaf1">
+                            <path id="Vector_24" d="M922.725 787.189C911.162 805.7 914.33 829.243 914.33 829.243C914.33 829.243 936.246 822.774 947.809 804.264C959.372 785.753 956.203 762.21 956.203 762.21C956.203 762.21 934.288 768.679 922.725 787.189Z" fill="#3f3d56"></path>
+                            <path id="Vector_25" d="M931.411 790.462C930.497 812.54 914.797 829.762 914.797 829.762C914.797 829.762 900.579 811.19 901.493 789.112C902.407 767.034 918.107 749.812 918.107 749.812C918.107 749.812 932.325 768.384 931.411 790.462Z" fill="#bb86fc"></path>
                         </g>
-                        <g id="galssbody" fill="#FFF">
-                          <path d="M762 278l-29 13-3 1v2h4l29-14-1-2"></path>
-                          <path
-                            d="M746 298c3-2 1-5 0-6-1-2-2-4-5-3-3 2-1 5 0 6s4 4 5 3zM732 294c2-1 4 1 5 3s2 3 0 5-4-1-5-3-2-3 0-5z">
-                          </path>
+                        <path id="Vector_26" d="M1006 827.544H58.0041V830H1006V827.544Z" fill="#3f3d56"></path>
+                        <g id="Girl">
+                            <path id="Vector_27" d="M702.547 721.083H700.195V452.382C700.197 451.287 699.964 450.206 699.513 449.218C699.063 448.229 698.407 447.358 697.592 446.669L699.078 444.764C700.164 445.684 701.039 446.845 701.639 448.163C702.239 449.481 702.55 450.923 702.547 452.382V721.083Z" fill="#3f3d56"></path>
+                            <path id="Vector_28" d="M727.752 653.747C727.752 653.747 741.057 639.176 746.503 642.108C751.948 645.039 730.845 658.068 730.845 658.068L727.752 653.747Z" fill="#FFB9B9"></path>
+                            <path id="Vector_29" opacity="0.1" d="M727.752 653.747C727.752 653.747 741.057 639.176 746.503 642.108C751.948 645.039 730.845 658.068 730.845 658.068L727.752 653.747Z" fill="black"></path>
+                            <path id="Vector_30" d="M687.158 621.945C687.158 621.945 682.267 631.097 683.547 640.962C684.827 650.827 696.531 682.483 700.51 681.92C704.489 681.358 733.964 658.685 733.964 658.685L728.343 650.491L706.81 664.11C706.81 664.11 703.53 615.401 687.158 621.945Z" fill="#D0CDE1"></path>
+                            <path id="Vector_31" d="M766.999 644.223L733.432 663.47C733.237 663.605 733.016 663.694 732.785 663.73C732.554 663.767 732.319 663.75 732.095 663.681C731.87 663.612 731.664 663.493 731.489 663.331C731.313 663.17 731.174 662.97 731.081 662.747L722.858 644.804C722.702 644.293 722.728 643.74 722.929 643.246C723.131 642.752 723.496 642.351 723.958 642.114L751.827 627.119C752.17 626.903 752.578 626.828 752.971 626.906C753.365 626.985 753.717 627.212 753.96 627.544L767.881 641.235C768.018 641.49 768.104 641.771 768.133 642.062C768.163 642.353 768.136 642.647 768.053 642.926C767.971 643.206 767.835 643.465 767.654 643.688C767.472 643.91 767.25 644.093 766.999 644.223V644.223Z" fill="#2F2E41"></path>
+                            <path id="Vector_32" d="M764.759 641.572L733.29 660.348L724.916 644.593L751.911 629.268L764.759 641.572Z" fill="#bb86fc"></path>
+                            <path id="Vector_33" d="M738.355 636.145C738.519 635.94 738.516 635.656 738.348 635.51C738.181 635.364 737.913 635.412 737.749 635.617C737.585 635.822 737.588 636.106 737.755 636.252C737.923 636.398 738.191 636.35 738.355 636.145Z" fill="#F2F2F2"></path>
+                            <path id="Vector_34" d="M749.938 652.176C750.047 652.039 750.045 651.85 749.934 651.753C749.822 651.656 749.643 651.688 749.534 651.824C749.425 651.961 749.427 652.15 749.538 652.247C749.65 652.345 749.829 652.313 749.938 652.176Z" fill="#F2F2F2"></path>
+                            <path id="Vector_35" opacity="0.1" d="M687.158 621.945C687.158 621.945 682.267 631.097 683.547 640.962C684.827 650.827 696.531 682.483 700.51 681.92C704.489 681.358 733.964 658.685 733.964 658.685L728.343 650.491L706.81 664.11C706.81 664.11 703.53 615.401 687.158 621.945Z" fill="black"></path>
+                            <path id="Vector_36" d="M718.757 656.531C718.757 656.531 733.815 643.956 738.834 647.624C743.853 651.292 721.267 661.247 721.267 661.247L718.757 656.531Z" fill="#FFB9B9"></path>
+                            <path id="Vector_37" d="M698.68 606.231C706.719 606.231 713.236 599.428 713.236 591.036C713.236 582.645 706.719 575.842 698.68 575.842C690.641 575.842 684.124 582.645 684.124 591.036C684.124 599.428 690.641 606.231 698.68 606.231Z" fill="#FFB9B9"></path>
+                            <path id="Vector_38" d="M748.873 696.876C748.873 696.876 764.432 698.972 763.93 708.927C763.429 718.882 751.884 760.275 751.884 760.275L750.88 776.517C750.88 776.517 751.884 803.763 748.873 803.239C745.861 802.715 738.834 783.853 738.834 783.853C738.834 783.853 730.301 778.089 734.317 772.85C738.332 767.61 741.344 768.134 740.34 762.37C739.336 756.607 739.838 732.505 742.85 725.169C745.861 717.834 747.616 713.788 747.616 713.788L737.83 713.118L748.873 696.876Z" fill="#FFB9B9"></path>
+                            <path id="Vector_39" opacity="0.1" d="M748.873 696.876C748.873 696.876 764.432 698.972 763.93 708.927C763.429 718.882 751.884 760.275 751.884 760.275L750.88 776.517C750.88 776.517 751.884 803.763 748.873 803.239C745.861 802.715 738.834 783.853 738.834 783.853C738.834 783.853 730.301 778.089 734.317 772.85C738.332 767.61 741.344 768.134 740.34 762.37C739.336 756.607 739.838 732.505 742.85 725.169C745.861 717.834 747.616 713.788 747.616 713.788L737.83 713.118L748.873 696.876Z" fill="black"></path>
+                            <path id="Vector_40" d="M749.877 699.495C749.877 699.495 764.934 703.163 766.44 713.642C767.946 724.121 775.475 755.035 775.475 755.035L783.506 774.421C783.506 774.421 796.054 797.999 790.532 797.475C785.011 796.951 777.482 785.424 774.973 785.424C772.463 785.424 764.934 782.281 765.436 780.185C765.938 778.089 769.452 771.802 769.452 771.802L757.308 749.72C754.963 745.457 753.191 740.878 752.041 736.112C750.794 730.94 749.375 724.605 749.375 722.55C749.375 718.882 739.336 717.31 739.336 717.31L749.877 699.495Z" fill="#FFB9B9"></path>
+                            <path id="Vector_41" d="M700.688 665.962L707.715 686.921C707.715 686.921 718.757 690.064 726.788 692.684C734.819 695.304 749.877 691.636 751.382 697.924C752.888 704.211 748.371 715.214 743.853 717.834C739.336 720.454 736.826 723.073 722.271 718.882C707.715 714.69 673.082 713.642 673.082 713.642C669.725 715.745 665.944 717.001 662.04 717.31C655.515 717.834 654.009 718.358 652.001 716.786C649.993 715.214 653.005 715.214 654.009 711.023C655.013 706.831 655.515 708.403 660.032 703.687C664.549 698.972 668.063 684.825 670.572 680.109C673.082 675.393 674.588 665.962 674.588 665.962H700.688Z" fill="#2F2E41"></path>
+                            <path id="Vector_42" d="M699.684 603.611C697.861 605.002 696.369 606.813 695.324 608.903C694.28 610.993 693.711 613.306 693.661 615.662C693.661 623.522 678.603 607.279 678.603 607.279C678.603 607.279 686.634 596.8 686.634 593.656C686.634 590.513 699.684 603.611 699.684 603.611Z" fill="#FFB9B9"></path>
+                            <path id="Vector_43" d="M680.611 600.468C680.611 600.468 689.646 604.135 691.653 609.375C693.661 614.614 701.19 625.618 701.19 625.618C701.19 625.618 711.73 637.145 708.217 649.72C704.703 662.295 701.692 665.438 701.692 667.534C701.692 669.63 696.672 673.298 692.657 672.774C688.642 672.25 673.584 670.154 672.58 668.058C671.576 665.962 665.553 636.097 669.569 625.094C672.826 616.685 676.512 608.465 680.611 600.468V600.468Z" fill="#D0CDE1"></path>
+                            <path id="Vector_44" d="M702.902 591.728C706.159 592.535 709.356 590.368 712.025 588.22C713.54 587.001 715.208 585.261 714.744 583.298C714.332 581.557 712.367 580.57 712.081 578.8C711.882 577.57 712.571 576.374 712.626 575.127C712.577 574.177 712.278 573.259 711.763 572.475C711.247 571.69 710.535 571.068 709.704 570.678C708.117 569.785 706.317 569.413 704.687 568.615C702.197 567.396 700.128 565.198 697.469 564.494C693.837 563.533 690.138 565.58 686.404 565.845C684.144 566.006 681.855 565.508 679.619 565.895C677.487 566.345 675.562 567.532 674.154 569.263C672.746 570.995 671.938 573.17 671.86 575.44C671.831 577.107 672.15 578.968 671.197 580.29C670.82 580.746 670.391 581.151 669.92 581.497C666.598 584.301 665.091 588.985 664.919 593.498C664.835 595.719 665.28 598.357 667.168 599.301C668.179 599.662 669.247 599.817 670.315 599.757C670.851 599.734 671.384 599.848 671.869 600.089C672.353 600.331 672.773 600.692 673.093 601.142C673.953 602.725 672.664 605.064 673.789 606.446C674.634 607.484 676.282 607.139 677.268 606.255C678.255 605.37 678.87 604.098 679.806 603.153C681.625 601.313 684.324 600.98 686.817 600.7C687.556 600.694 688.275 600.448 688.874 599.996C689.327 599.5 689.622 598.869 689.718 598.191C690.046 596.63 690.05 595.013 689.73 593.45C689.572 592.966 689.552 592.445 689.673 591.949C689.838 591.597 690.092 591.299 690.409 591.089C691.954 589.877 694.662 588.112 696.671 588.446C698.9 588.816 700.653 591.171 702.902 591.728Z" fill="#2F2E41"></path>
+                            <path id="Vector_45" d="M682.619 619.33C682.619 619.33 676.596 627.713 676.596 637.669C676.596 647.624 684.124 680.633 688.14 680.633C692.155 680.633 724.278 662.295 724.278 662.295L719.761 653.387L696.673 663.866C696.673 663.866 699.684 615.138 682.619 619.33Z" fill="#D0CDE1"></path>
+                            <path id="Vector_46" d="M750.77 713.904H635.505V737.232H750.77V713.904Z" fill="#bb86fc"></path>
+                            <path id="Vector_47" d="M693.138 738.459C690.643 738.456 688.252 737.421 686.488 735.579C684.724 733.738 683.731 731.241 683.728 728.637V452.382C683.728 450.525 684.233 448.705 685.183 447.135C686.134 445.565 687.491 444.308 689.098 443.511C690.705 442.713 692.496 442.408 694.262 442.63C696.029 442.852 697.699 443.592 699.078 444.764L697.592 446.669C696.557 445.789 695.305 445.234 693.98 445.068C692.655 444.901 691.312 445.131 690.107 445.729C688.902 446.327 687.884 447.269 687.172 448.447C686.459 449.625 686.081 450.989 686.081 452.382V728.637C686.083 730.59 686.827 732.463 688.15 733.844C689.473 735.225 691.267 736.002 693.138 736.004V738.459Z" fill="#3f3d56"></path>
+                            <path id="Vector_48" d="M675.352 584.173C675.859 583.749 675.28 582.119 674.06 580.532C672.839 578.946 671.44 578.005 670.933 578.429C670.427 578.854 671.005 580.484 672.226 582.07C673.446 583.656 674.846 584.598 675.352 584.173Z" fill="#938fd2"></path>
                         </g>
-                      </g>
-                    </g>
-                    <g id="Front_arm">
-                      <g id="lowerarm">
-                        <path fill="#F89F71" d="M751 386h-2c-5 0-36-13-39-14s-10-1-12 1l-6 7h-14l11-13c2-2 7-4 13-3l46 6s7 14 3 16z">
-                        </path>
-                        <path id="highlights" fill="#F68E5A" d="M702 365c-6-1-11 1-13 3l-11 12h7l8-8c4-5 14-7 14-7h-5z"></path>
-                      </g>
-                      <path fill="#F89F71" d="M788 319c16 7 0 20-4 25l-25 33c-2 3-4 7-8 9l-3-16 19-41c4-8 10-15 21-10z"></path>
-                      <path fill="#F68E5A" d="M788 319c-11-5-17 2-21 10l-9 19s12-22 22-26c3-1 5-3 8-3z"></path>
-                    </g>
-                  </g>
-                </g>
-                <g id="Laptop">
-                  <path fill="#86858B" d="M647 339h7c2 0 3 1 4 3l15 38h38s-1 6-10 6h-31l-23-47z"></path>
-
-
-                </g>
-                <g id="Desk">
-                  <path fill="#52057B" d="M369 386h178v10H369zM547 386h220v10H547z"></path>
-                  <path fill="#e4d0fc" d="M548 396h9v154h-9z"></path>
-                </g>
-                <g id="flowerpot">
-                  <g id="plants">
-
-                  </g>
-
-                </g>
-                <g id="Man__x2F__chair__x2F__screen">
-                  <path id="chairbackbar" fill="#52057B" d="M368 468h10v76h-10z"></path>
-                  <path id="keyboard" fill="#D2D2D3" d="M507 380c3 0 4 2 1 4l-3 2h-55s4-6 9-6h48z"></path>
-                  <g id="man">
-                    <g id="man-body">
-                      <g id="legs">
-                        <g id="backleg">
-                          <path id="foot" fill="#BCBCBD" d="M365 513l18-4 6 12s-1 15 6 22l10 5c-1 2-18 2-20 2l-14-9c-6-6-10-22-6-28z">
-                          </path>
-                          <path id="bottombackleg" fill="#413C69"
-                            d="M384 509s45-10 45-16c0-4-7-7-6-10 5-9 24-13 30-3 5 8 0 27-9 29l-55 12-5-12z">
-                          </path>
-                          <path id="topbbackleg" fill="#413C69"
-                            d="M415 474l-26-34c1 0-10-11 12-11s33 4 40 10 14 53 11 60-21-4-28-14l-9-11z"></path>
+                        <g id="leaf11">
+                            <path id="Vector_49" d="M574.578 787.189C563.015 805.7 566.183 829.243 566.183 829.243C566.183 829.243 588.098 822.774 599.661 804.264C611.224 785.753 608.056 762.21 608.056 762.21C608.056 762.21 586.141 768.679 574.578 787.189Z" fill="#3f3d56"></path>
+                            <path id="Vector_50" d="M583.263 790.462C582.349 812.54 566.65 829.762 566.65 829.762C566.65 829.762 552.432 811.19 553.346 789.112C554.26 767.034 569.959 749.812 569.959 749.812C569.959 749.812 584.177 768.384 583.263 790.462Z" fill="#bb86fc"></path>
                         </g>
-                        <g id="Front-leg">
-                          <path id="frontfoot" fill="#BCBCBD" d="M446 529v21l40-1 2-9s-12 1-20-3-9-8-9-8h-13z">
-                          </path>
-                          <g id="bot">
-                            <path fill="#39065A" d="M459 529c5-15 21-89 20-95s-8-18-18-8-19 0-18 26l3 77h13z">
-                            </path>
-                            <path id="shade_1_" fill="#39065A" "="" d=" M444 488c7-15 19-35 11-42-5-4-13-2-13-2l2 44z"></path>
-                          </g>
-                          <g id="top">
-                            <path fill="#39065A"
-                              d="M410 408c19 3 62 9 67 18s0 14 0 20-11-2-23-2l-99-2c-7 0-12-4-9-18 7-39 64-16 64-16">
-                            </path>
-                            <path id="shade" fill="#39065A" "="" d=" M397 417c66 10 80 9 80 9s-6-14-70-18c-13 1-10 9-10 9z"></path>
-                          </g>
+                        <g id="leaf10">
+                            <path id="Vector_51" d="M384.286 794.191C389.814 815.523 408.748 828.734 408.748 828.734C408.748 828.734 418.72 807.36 413.192 786.028C407.664 764.697 388.73 751.485 388.73 751.485C388.73 751.485 378.758 772.86 384.286 794.191Z" fill="#3f3d56"></path>
+                            <path id="Vector_52" d="M392.409 789.607C407.578 805.021 409.43 828.717 409.43 828.717C409.43 828.717 386.69 827.421 371.521 812.006C356.352 796.592 354.499 772.896 354.499 772.896C354.499 772.896 377.24 774.192 392.409 789.607Z" fill="#bb86fc"></path>
                         </g>
-                      </g>
-                      <g id="head">
-                        <g id="face">
-                          <path fill="#F89F71"
-                            d="M411 281c0-12-8-25-19-16s-21 23-18 31 2 24 2 24c0 9 25 18 23 0s6-10 9-10 2 0 2-5l1-24z">
-                          </path>
-                          <path id="faceglow" fill="#eda682" d="M411 264c5 5 6 23 3 32s-6 5-5 1c1-2 3-23-2-29-5-5 4-4 4-4z"></path>
-                        </g>
-                        <g id="hair">
-                          <path fill="#585268"
-                            d="M396 287c-2-9-1-14 3-15s15-21-1-22c-17 0-26-14-33 0s4 19 4 19-10 2-9 14 9 12 12 15c5 7 2 8 4 11 0 0 11-2 11-10s-4-15-1-18 8 1 7 19c-1 13 4 20 7 21s15 5 16 1 0-12-3-18c-1-3 2-9 0-11-3-2-4 6-8 5s-7-5-9-11z">
-                          </path>
-                          <path fill="#585268" d="M399 272c4-1 10-1 14-8s7-19 2-22-1 9-17 8c-27-1-3 23 1 22z" class="mankauf"></path>
-                        </g>
-                      </g>
-                      <g id="torso">
-                        
-                        <path id="shirt" fill="#c4c1f7"
-                          d="M357 340l19-19h11c40 0 40 7 30 64-7 35-13 32-32 39-12 5-22 5-35 4s7-88 7-88z"></path>
-                      </g>
-                      <g id="arm">
-                        <g id="Bluearmbot">
-                          <path fill="#F68E5A" d="M487 380c-5-4-11-12-16-10-7 3-6 10 3 10h13z"></path>
-                          <path fill="#F68E5A" d="M437 384l34-14-4 6-27 19z"></path>
-                          <path fill="#F89F71" d="M440 395s20-16 26-19c4-2 10 1 11 4h-7c-5 6-14 20-22 23-1 1-8-8-8-8z"></path>
-                        </g>
-                        <path id="Bluearmtop" fill="#F89F71" d="M404 360l31 40c5 4 9 4 10 4 10-1-4-5-5-11l-10-54c-28-6-26 21-26 21z">
-                        </path>
-                        <path id="armhighlight" fill="#F68E5A" d="M439 386l-15-37 7-7z"></path>
-                        <path id="toparm" fill="#c2bff5" d="M406 322c22-5 26 18 24 21-3 8-26 19-26 19l-8-15c-8-18 10-25 10-25z">
-                        </path>
-                        <path id="toparmshade" fill="#c2bff5"
-                          d="M418 334c-5-7-10-13-13-11-8 2-15 14-8 27 4 9 7 12 7 12s15-7 19-12c3-3-3-13-5-16z">
-                        </path>
-                      </g>
+                        <path id="leaf17" d="M342.133 211.239C340.814 233.294 324.801 250.2 324.801 250.2C324.801 250.2 310.927 231.347 312.245 209.292C313.564 187.236 329.577 170.33 329.577 170.33C329.577 170.33 343.451 189.183 342.133 211.239Z" fill="#bb86fc"></path>
+                        <path id="leaf16" d="M175.215 71.808C193.122 83.5934 199.653 106.369 199.653 106.369C199.653 106.369 177.151 110.037 159.244 98.2512C141.337 86.4658 134.805 63.6902 134.805 63.6902C134.805 63.6902 157.307 60.0225 175.215 71.808Z" fill="#bb86fc"></path>
+                        <path id="leaf15" d="M135.225 340.696C153.132 352.482 159.664 375.257 159.664 375.257C159.664 375.257 137.162 378.925 119.254 367.14C101.347 355.354 94.8153 332.578 94.8153 332.578C94.8153 332.578 117.317 328.911 135.225 340.696Z" fill="#bb86fc"></path>
+                        <path id="lef14" d="M499.273 111.117C493.873 132.485 475.018 145.819 475.018 145.819C475.018 145.819 464.918 124.51 470.319 103.143C475.719 81.7755 494.574 68.4412 494.574 68.4412C494.574 68.4412 504.674 89.7501 499.273 111.117Z" fill="#bb86fc"></path>
+                        <path id="leaf13" d="M669.625 127.778C663.278 148.86 643.849 161.263 643.849 161.263C643.849 161.263 634.71 139.487 641.057 118.405C647.405 97.3233 666.834 84.9197 666.834 84.9197C666.834 84.9197 675.972 106.696 669.625 127.778Z" fill="#bb86fc"></path>
+                        <path id="leaf12" d="M853.749 362.407C842.251 380.962 820.358 387.514 820.358 387.514C820.358 387.514 817.107 363.984 828.605 345.429C840.103 326.874 861.995 320.321 861.995 320.321C861.995 320.321 865.246 343.852 853.749 362.407Z" fill="#bb86fc"></path>
                     </g>
-                  </g>
-                  <g id="Chair">
-                    <path id="foot_1_" fill="#52057B" d="M337 550h73l-10-13h-52z"></path>
-                    <g id="seat">
-                      <path fill="#52057B" d="M371 442l53 1c3 0 6 0 6 7 0 5-3 6-6 6h-22s-2 6-4 7h-14l-4 12h-15l-5-12-3-8 14-13z">
-                      </path>
-                      <path fill="#bb86fc" d="M326 449c0 4 3 7 11 7h47s-5-1-5-6c0-3 0-8 5-8h-48c-7 0-10 2-10 7z">
-                      </path>
-                    </g>
-                    <g id="backrest">
-                      <path fill="#52057B" d="M349 340c12 0 19-2 20 8l7 41c2 14 4 29-18 29 7-5 12-7 12-10 0 0-6-56-12-61l-9-7z">
-                      </path>
-                      <path fill="#bb86fc" d="M318 340c-8 0-12 5-10 17l8 48c2 8 5 13 14 13h29s14-2 12-19-6-32-8-45-7-14-14-14h-31z">
-                      </path>
-                      <path fill="#dbd9fa" d="M332 376c-6 0-12-1-9 11l5 24c1 5 1 6 8 6h19s7 1 5-8l-5-25c-1-5-1-8-9-8h-14z"></path>
-                      <path fill="#36474A" d="M345 395l2 1 9 49c1 6 5 11 7 12s2 6 2 6-8-2-10-3-7-25-7-25l-3-28-2-11 2-1z"></path>
-                      <path fill="#52057B" d="M332 395l9 51c1 8 3 16 13 17h11s-7-3-9-6c-4-4-7-28-7-28l-4-34h-13z">
-                      </path>
-                    </g>
-                  </g>
-                  <g id="Man_screen">
-                    <g class="redskmove">
-                      <path fill="#a995ce" d="M574 360c0 2-2 4-4 4h-89c-2 0-4-2-4-4v-69c0-2 2-4 4-4h89c2 0 4 2 4 4v69z"
-                        class="redscreen"></path>
-                    </g>
-                    <g class="greenscrmove">
-                      <g class="greenscreen">
-                        <path fill="#9562d3" d="M523 337c0 2-2 4-4 4h-68c-2 0-4-2-4-4v-46c0-2 2-4 4-4h68c2 0 4 2 4 4v46z"></path>
-                        <path fill="#F7FCFB" d="M517 307c0 2-2 4-4 4h-51c-2 0-4-2-4-4v-4c0-2 2-4 4-4h51c2 0 4 2 4 4v4z"></path>
-                        <path fill="#3B064D" d="M492 326c0 2-2 4-4 4h-26c-2 0-4-2-4-4v-2c0-2 2-4 4-4h26c2 0 4 2 4 4v2z"></path>
-                      </g>
-                    </g>
-                    <g class="screenbutton">
-                      <circle cx="523" cy="314" r="18" fill="#52057B"></circle>
-                      <path fill="#bb86fc" d="M523 309l-4 8h8z"></path>
-                    </g>
-                  </g>
-                </g>
-              </svg>
-                    </div>
-                    <div class="dropdown col-md-6 d-flex mt-5 flex-column text-center justify-content-center animate__animated animate__zoomIn animate__delay-1s">
-                        <h2 class="main-heading mb-0 projects_head">My <span class="my_projects">Projects</span></h2>
-                        <p class="pre-heading font-weight-bolder" class="mb-0 mt-3 text-center animate__animated animate__zoomIn animate__delay-2s">
-                            My projects has main goal to bring more knowledge in any Program Language.</p>
+                </svg>
+                            </div>
+                        </div>
+                        <div class="px-md-5 p-3 col-md-6 d-flex flex-column align-items-center justify-content-center animate__animated animate__zoomIn animate__delay-1s">
+                            <h2 class="dropdown1 main-heading mb-0 education_head">Educational <span class="edu_background">Background</span></h2>
+                            <p class="dropdown2 pre-heading font-weight-bolder text-center animate__animated animate__fadeInUp animate__delay-2s">
+                                An investment in knowledge pays the best interest. – Benjamin Franklin
+                            </p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="row page-content projectcards">       
-      <div class="column skill-card card aos-init aos-animate" style="margin: 15px" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="600">
-        <div class="wrapper" style="background: url(images/food.jpg) center / cover no-repeat;">
-          <div class="header">
-          </div>
-          <div class="data">
-            <div class="content">
-            <div class="title-div">
-              <h1 class="title"><a href="#">Recipe Finding App</a></h1>
-              </div>
-          <ul class="menu-content"><br>
-                <li>
-                  <a href="images/Recipe.jpg" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                      <line x1="8" y1="21" x2="16" y2="21"></line>
-                      <line x1="12" y1="17" x2="12" y2="21"></line>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Passionatelytoooadorable/AI-Recipe" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+            </section>
         </div>
-      </div>     
-  
-      <div class="column skill-card card aos-init aos-animate" style="margin: 15px" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="600">
-        <div class="wrapper" style="background: url(images/portfolio.jpg) center / cover no-repeat;">
-          <div class="header">
-          </div>
-          <div class="data">
-            <div class="content">
-            <div class="title-div">
-              <h1 class="title"><a href="#">Profile</a></h1>
+    
+    
+        <!-- Education Section  -->
+        <section class="s2">
+            <div class="container-sm  edSection">
+                <div class="conatiner text-center mb-5">
+                    <h1 class="head aos-init" data-aos="fade-up" data-aos-delay="300">Formal <span class="edu_background">Education</span></h1>
+                </div>
+                
+        </div></section>
+    
+        <!--Education Timeline-->
+        <section class="timeline">
+            <div class="container">
+                
+                <!-- Dynamic Education Timeline Cards -->
+                <div class="timeline-item">
+                    <div class="timeline-img"></div>
+              
+                    <div class="timeline-content js--fadeInLeft">
+                      <div class="timeline-img-header" style="background-image: url('images/ed1.jpeg'); background-repeat: no-repeat; background-size: auto;"></div>
+                      <div class="date date1">2022 - 2026</div>
+                      <div>
+                          <h2 class="timelineHeading">VIT Bhopal University</h2>
+                          <h6>Undergraduate, Computer Science &amp; Engineering</h6>
+                          <li>Core Member, Open-Source Club VIT Bhopal</li>
+                          <li>Core Member, Cisco Community VIT Bhopal</li>
+
+                      </div>
+                    </div>
+                 </div>
+    
+        <!-- Second -->
+        <div class="timeline-item">
+            <div class="timeline-img"></div>
+      
+            <div class="timeline-content timeline-card js--fadeInRight">
+              <div>
+                  <div class="timeline-img-header" style="background-image: url('images/ed2.jpeg'); background-repeat: no-repeat; background-size: auto; background-position: center top"></div>
               </div>
-          <ul class="menu-content"><br>
-                <li>
-                  <a href="https://portfolio-phi-nine-70.vercel.app/" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                      <line x1="8" y1="21" x2="16" y2="21"></line>
-                      <line x1="12" y1="17" x2="12" y2="21"></line>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Passionatelytoooadorable/Portfolio" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+              <div class="date date2">2022</div>
+              <div class="alignment">
+                  <h3 class="timelineHeading2">Apeejay School</h3>
+                  <h6>Senior Secondary Education</h6>
+
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="column skill-card card aos-init aos-animate" style="margin: 15px" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="600">
-        <div class="wrapper" style="background: url(images/flipkart.jpeg) center / cover no-repeat;">
-          <div class="header">
-          </div>
-          <div class="data">
-            <div class="content">
-            <div class="title-div">
-              <h1 class="title"><a href="#">Flipkart_Clone</a></h1>
+    
+        <!-- Third -->
+    
+        <div class="timeline-item">
+            <div class="timeline-img"></div>
+      
+            <div class="timeline-content js--fadeInLeft">
+              <div class="timeline-img-header" style="background-image: url('images/ed2.jpeg'); background-repeat: no-repeat; background-size: auto"></div>
+              <div class="date date3">2020</div>
+              <div class="align-third">
+                  <h2 class="timelineHeading3">Apeejay School</h2>
+                  <h6>High School Education</h6>
+                  <li>100% in Mathematics</li>
+                  <li>Dr. Satya Paul Award for Human Values</li>
               </div>
-          <ul class="menu-content"><br>
-                <li>
-                  <a href="https://flipkart-clone-seven-azure.vercel.app/" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                      <line x1="8" y1="21" x2="16" y2="21"></line>
-                      <line x1="12" y1="17" x2="12" y2="21"></line>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Passionatelytoooadorable/Flipkart_Clone" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div class="column skill-card card aos-init aos-animate" style="margin: 15px" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="600">
-        <div class="wrapper" style="background: url(images/jio.png) center / cover no-repeat;">
-          <div class="header">
-          </div>
-          <div class="data">
-            <div class="content">
-            <div class="title-div">
-              <h1 class="title"><a href="#">Spring-Music-Player</a></h1>
-              </div>
-          <ul class="menu-content"><br>
-                <li>
-                  <a href="https://spring-music-player.vercel.app/" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                      <line x1="8" y1="21" x2="16" y2="21"></line>
-                      <line x1="12" y1="17" x2="12" y2="21"></line>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Passionatelytoooadorable/Spring-Music-Player" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
+    
             </div>
-          </div>
+          </section>
+    
+        <!--MOOCs Cards-->
+        <div id="mooc" class="container-fluid">
+            <h4 class="text-center pb-2 pt-5 aos-init aos-animate" data-aos="fade-up" data-aos-delay="300">Online <span class="edu_background">Accreditations</span></h4>
+            <div class="row mooc">        
+            
+                <div class="col-6 col-md-3 col-sm-4 column aos-init" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">  
+                    <div class="card mb-3 mx-auto">
+                       <div class="content">
+                          <div class="content-overlay"></div>
+                            <img src="images/c9.png" class="card-img-top content-image">     
+                          <div class="content-details fadeIn-bottom">
+                            <a href="https://academy.postman.com/path/postman-api-fundamentals-student-expert/postman-api-fundamentals-student-expert-certification-1" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                          </div>
+                        </div>
+                        <div class="card-body">
+                            <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">Postman API Fundamentals Student Expert</h6>
+                        </div>
+                    </div>
+                </div>  
+                
+                <div class="col-6 col-md-3 col-sm-4 column aos-init" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">  
+                <div class="card mb-3 mx-auto">
+                <div class="content">
+                <div class="content-overlay"></div>
+                <img src="images/c1.png" class="card-img-top content-image">     
+                      <div class="content-details fadeIn-bottom">
+                        <a href="https://onlinecourses.nptel.ac.in/noc21_cs14/preview" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">Cloud Computing</h6>
+                    </div>
+                </div>
+            </div>        
+            <div class="col-6 col-md-3 col-sm-4 column aos-init" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">  
+                <div class="card mb-3 mx-auto">
+                   <div class="content">
+                      <div class="content-overlay"></div>
+                        <img src="images/c2.png" class="card-img-top content-image">     
+                      <div class="content-details fadeIn-bottom">
+                        <a href="https://www.coursera.org/learn/principles-of-ux-ui-design" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">Principles of UX/UI Design</h6>
+                    </div>
+                </div>
+            </div>        
+                  
+            <div class="col-6 col-md-3 col-sm-4 column aos-init" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">  
+                <div class="card mb-3 mx-auto">
+                   <div class="content">
+                      <div class="content-overlay"></div>
+                        <img src="images/c3.png" class="card-img-top content-image">     
+                      <div class="content-details fadeIn-bottom">
+                        <a href="https://www.udemy.com/course/datastructurescncpp/?couponCode=NVDIN35" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">Mastering Data Structures & Algorithms using C and C++</h6>
+                    </div>
+                </div>
+            </div>        
+                  
+            <div class="col-6 col-md-3 col-sm-4 column aos-init" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">  
+                <div class="card mb-3 mx-auto">
+                   <div class="content">
+                      <div class="content-overlay"></div>
+                        <img src="images/c4.png" class="card-img-top content-image">     
+                      <div class="content-details fadeIn-bottom">
+                        <a href="https://matlabacademy.mathworks.com/details/matlab-for-data-processing-and-visualization/mlvi" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">MATLAB for Data Processing and Visualization</h6>
+                    </div>
+                </div>
+            </div>        
+                  
+            <div class="col-6 col-md-3 col-sm-4 column aos-init" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">  
+                <div class="card mb-3 mx-auto">
+                   <div class="content">
+                      <div class="content-overlay"></div>
+                        <img src="images/c5.png" class="card-img-top content-image">     
+                      <div class="content-details fadeIn-bottom">
+                        <a href="https://www.udacity.com/course/intro-to-html-and-css--ud001" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">What is Graphic Design?</h6>
+                    </div>
+                </div>
+            </div>        
+                  
+            <div class="col-6 col-md-3 col-sm-4 column aos-init" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">  
+                <div class="card mb-3 mx-auto">
+                   <div class="content">
+                      <div class="content-overlay"></div>
+                        <img src="images/ed1.jpeg" class="card-img-top content-image">     
+                      <div class="content-details fadeIn-bottom">
+                        <a href="https://vityarthi.com/home/course/python-essentials/2" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">Vityarthi (Python Essentials)</h6>
+                    </div>
+                </div>
+            </div>        
+                  
+            <div class="col-6 col-md-3 col-sm-4 column aos-init" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">  
+                <div class="card mb-3 mx-auto">
+                   <div class="content">
+                      <div class="content-overlay"></div>
+                        <img src="images/c6.png" class="card-img-top content-image">     
+                      <div class="content-details fadeIn-bottom">
+                        <a href="https://www.simplilearn.com/free-course-to-learn-cpp-basics-skillup" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">Introduction to C plus plus</h6>
+                    </div>
+                </div>
+            </div>     
+            
+            <div class="col-6 col-md-3 col-sm-4 column aos-init" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">  
+                <div class="card mb-3 mx-auto">
+                   <div class="content">
+                      <div class="content-overlay"></div>
+                        <img src="images/c2.png" class="card-img-top content-image">     
+                      <div class="content-details fadeIn-bottom">
+                        <a href="https://www.coursera.org/professional-certificates/ai-engineer" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">IBM AI Engineering</h6>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="col-6 col-md-3 col-sm-4 column aos-init" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">  
+                <div class="card mb-3 mx-auto">
+                   <div class="content">
+                      <div class="content-overlay"></div>
+                        <img src="images/c7.png" class="card-img-top content-image">     
+                      <div class="content-details fadeIn-bottom">
+                        <a href="https://www.mygreatlearning.com/academy/learn-for-free/courses/aws-image-processing" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">AWS Image Processing</h6>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="col-6 col-md-3 col-sm-4 column aos-init" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">  
+                <div class="card mb-3 mx-auto">
+                   <div class="content">
+                      <div class="content-overlay"></div>
+                        <img src="images/c2.png" class="card-img-top content-image">     
+                      <div class="content-details fadeIn-bottom">
+                        <a href="https://www.coursera.org/learn/machine-learning-with-python?msockid=155f1bc260c26e0f3755087d61706fad" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">Machine Learning with Python</h6>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="col-6 col-md-3 col-sm-4 column aos-init" data-aos="fade-up" data-aos-easing="linear" data-aos-delay="600">  
+                <div class="card mb-3 mx-auto">
+                   <div class="content">
+                      <div class="content-overlay"></div>
+                        <img src="images/c8.png" class="card-img-top content-image">     
+                      <div class="content-details fadeIn-bottom">
+                        <a href="https://www.cloudskillsboost.google/course_templates/280" target="_blank"><i class="fa fa-info-circle fa-2x" aria-hidden="true" style="color: white;"></i></a>                                   
+                      </div>
+                    </div>
+                    <div class="card-body">
+                        <h6 class="mt-0 py-2 text-center font-weight-bold mooc-title" style="font-size:12px;">Innovating with Data and Google Cloud</h6>
+                    </div>
+                </div>
+            </div>  
+                    
+                    
         </div>
-      </div>
 
-      <div class="column skill-card card aos-init aos-animate" style="margin: 15px" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="600">
-        <div class="wrapper" style="background: url(images/order.jpg) center / cover no-repeat;">
-          <div class="header">
-          </div>
-          <div class="data">
-            <div class="content">
-            <div class="title-div">
-              <h1 class="title"><a href="#">FoodiesWeb</a></h1>
-              </div>
-          <ul class="menu-content"><br>
-                <li>
-                  <a href="https://foodies-web-app.vercel.app/" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                      <line x1="8" y1="21" x2="16" y2="21"></line>
-                      <line x1="12" y1="17" x2="12" y2="21"></line>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Passionatelytoooadorable/FoodiesWeb" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+ 
+          <!--Cursor-->
+          <div class="cursor-dot-outline" style="top: 602px; left: 416px; opacity: 0; transform: translate(-50%, -50%) scale(1);"></div>
+          <div class="cursor-dot" style="opacity: 0; top: 602px; left: 416px; transform: translate(-50%, -50%) scale(1);"></div>
+        <!-- Dynamic footer section -->
+    
+        <!-- Google Analytics -->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-G6D61F5TL4"></script>
+        <!-- Fetching our Google Tag Manager -->
+    
+        <!-- script -->
+        <script src="js/app.js"></script>
+        <script src="js/cursor.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script type="text/javascript" src="js/education.js"></script>
+    
+    </body>
 
-      <div class="column skill-card card aos-init aos-animate" style="margin: 15px" data-aos="zoom-in-up" data-aos-easing="linear" data-aos-delay="300" data-aos-duration="600">
-        <div class="wrapper" style="background: url(images/discord.jpeg) center / cover no-repeat;">
-          <div class="header">
-          </div>
-          <div class="data">
-            <div class="content">
-            <div class="title-div">
-              <h1 class="title"><a href="#">Discord-Clone</a></h1>
-              </div>
-          <ul class="menu-content"><br>
-                <li>
-                  <a href="images/discord.png" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-monitor">
-                      <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                      <line x1="8" y1="21" x2="16" y2="21"></line>
-                      <line x1="12" y1="17" x2="12" y2="21"></line>
-                    </svg>
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/Passionatelytoooadorable/Discord-Clone" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="25" viewBox="0 0 30 28" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github">
-                      <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-     <!--Cursor-->
-     <div class="cursor-dot-outline" style="top: 436px; left: 561px; opacity: 0;"></div>
-     <div class="cursor-dot" style="opacity: 0; top: 436px; left: 561px;"></div>
-
-    <!-- script -->
-    <script src="js/app.js"></script>
-    <script src="js/cursor.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="js/project.js"></script>
-</body>
 </html>
