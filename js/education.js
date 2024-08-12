@@ -12,7 +12,7 @@ const moocscards = [
   {
     title: "Cloud Computing",
     cardImage: "images/c1.png",
-    moocLink: "https://onlinecourses.nptel.ac.in/noc21_cs14/preview",
+    moocLink: "images/cc.png",
   },
   {
     title: "Principles of UX/UI Design",
