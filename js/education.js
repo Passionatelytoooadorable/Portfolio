@@ -52,7 +52,7 @@ const moocscards = [
   {
     title: "AWS Image Processing",
     cardImage: "images/c7.png",
-    moocLink: "https://olympus.mygreatlearning.com/courses/64212/certificate",
+    moocLink: "https://www.mygreatlearning.com/academy/learn-for-free/courses/aws-image-processing",
   },
   {
     title: "Machine Learning with Python",
