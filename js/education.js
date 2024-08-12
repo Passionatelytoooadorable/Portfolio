@@ -37,7 +37,7 @@ const moocscards = [
   {
     title: "Vityarthi (Python Essentials)",
     cardImage: "images/ed1.jpeg",
-    moocLink: "https://vityarthi.com/home/course/python-essentials/2",
+    moocLink: "images/v.jpg",
   },
   {
     title: "Introduction to C plus plus",
