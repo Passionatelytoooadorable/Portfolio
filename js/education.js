@@ -7,7 +7,7 @@ const moocscards = [
   {
     title: "GSSoC'24 Contributor",
     cardImage: "images/c10.jpeg",
-    moocLink: "c10.png",
+    moocLink: "images/c10.png",
   },
   {
     title: "Postman API Fundamentals Student Expert",
