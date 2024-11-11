@@ -6,7 +6,7 @@ const moocs = document.querySelector(".moocs");
 const moocscards = [
   {
     title: "GSSoC'24 Contributor",
-    cardImage: "images/c10.jpeg",
+    cardImage: "images/gssoc.png",
     moocLink: "images/c10.png",
   },
   {
