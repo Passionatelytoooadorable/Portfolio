@@ -5,6 +5,11 @@ AOS.init();
 const moocs = document.querySelector(".moocs");
 const moocscards = [
   {
+    title: "GSSoC'24 Contributor",
+    cardImage: "images/c10.jpeg",
+    moocLink: "c10.png",
+  },
+  {
     title: "Postman API Fundamentals Student Expert",
     cardImage: "images/c9.png",
     moocLink: "https://api.badgr.io/public/assertions/6kizmTJtTMWRTKbmz6Xs5g",
